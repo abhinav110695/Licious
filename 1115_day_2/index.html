@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index</title>
+</head>
+<style>
+    #vishwa_body_products_page{ background-color: #F7F6F6;}
+    #vishwa_products_grid{
+        margin: 100px;
+        display: grid; gap: 50px; margin: auto; width: 75%; margin-top: 100px;
+        grid-template-columns: repeat(3, 1fr);
+        border: red 1px solid;
+
+    }
+</style>
+<body id="vishwa_body_products_page">
+    <div id="vishwa_products_grid">
+
+    </div>
+    
+</body>
+</html>
+<script>
+    
+    let vishwa_getdata=async(query)=>{
+        let url="https://dao54xqhg9jfa.cloudfront.net/OMS-ProductMerchantdising/5de11587-aa54-d6ff-3fe9-dfd35985d846/original/ChickenDrumstickHeroShot.jpg?format=webp";
+        let response=await fetch(url);
+        let data=await response.json();
+        return data
+    }
+    let append=(data)=>{
+        let vishwa_products_grid=document.querySelector("vishwa_products_grid");
+        vishwa_products_grid.innerHTML=null;
+        data.forEach((ele)=>{
+            let vishwa_cart=document.createElement("div");
+            vishwa_cart.setAttribute("class","vishwa_cart")
+            let img=document.createElement("img");
+            img.src=url;
+            vishwa_cart.append(img);
+            vishwa_products_grid.append(vishwa_cart);
+            
+        })
+    }
+
+   
+
+
+
+</script>
