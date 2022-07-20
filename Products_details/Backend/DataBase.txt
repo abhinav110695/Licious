@@ -6,3 +6,4 @@ Five Type of data stored in our data Base:
 3.Dishes_of_chicken
 4.sauce
 5.fish
+6.bestSeller

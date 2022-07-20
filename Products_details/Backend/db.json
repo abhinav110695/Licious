@@ -1233,5 +1233,211 @@
       "off": "15",
       "off_tag": "%OFF"
     }
+  ],
+  "bestSeller": [
+    {
+      "imgUrl": "https://d2407na1z3fc0t.cloudfront.net/prodDev/pr_av4kgtb3l1h/2/prod_display_image/1631077710.8126--2021-09-0810:38:30--1818",
+      "name": "Chicken Curry Cut (Small Pcs) - Large Pack",
+      "des": "Bone-in chunky pieces of skinless meat including Two le...",
+      "description":"With our Chicken Curry Cut on hand, making a delicious chicken curry has never been easier!.Licious Chicken Curry Cut is a mix of bone-in, small pieces of breast, wing (without the tip), leg and thigh meat, enough to feed a small to medium-sized family. This Small pack consists of 13-16 pieces of smaller cuts of chicken, for when you are making a smaller portion of curry or looking to reduce cooking time. Smaller pieces of chicken cook faster because of the higher surface-to-volume ratio.These pieces remain juicy and turn tender once cooked. Make Andhra Style Chicken Curry, Dhaba Style Chicken Curry, Mughlai Chicken Curry and more with Licious Chicken Curry Cut (Small)",
+     
+      "net_tag": "Net wt:",
+      "net": 1000,
+      "gross_tag": "Gross:",
+      "gross": "1026",
+      "gross_wt": 1026,
+      "unit": "gms",
+      "price_tag": "MRP:",
+      "cuurency": "₹",
+      "price": 271,
+      "strikedPrice": 50,
+      "off": "",
+      "off_tag": "%OFF",
+      "No_off_pices":"26-34",
+      "Serves ":"6"
+    },
+    {
+      "imgUrl": "https://d2407na1z3fc0t.cloudfront.net/prodDev/pr_avakgtb7ywh/2/prod_display_image/1631077382.6688--2021-09-0810:33:02--1818",
+      "name": "Chicken Curry Cut (Large Pcs) - Large Pack",
+      "des": "Half a chicken cut to chunky pieces including Two leg, a...",
+      "description":"A combination of dark and white meat, the Chicken Curry Cut (small) includes two leg cut into two, two wing without tip and two breast quarter with backbone. With a fresh, natural flavour and plump texture, this package includes both bone-in and boneless pieces. These pieces turn juicy and tender when cooked, which makes them ideal for making chicken curries. Order farm fresh and hormone-free Chicken Curry Cut pieces online from Licious and get home delivery.",
+      "net_tag": "Net wt",
+      "net": 1000,
+      "gross_tag": "Gross:",
+      "gross": "1026",
+      "unit": "gms",
+      "price_tag": "MRP:",
+      "cuurency": "₹",
+      "price": 248,
+      "strikedPrice": 50,
+      "off": "",
+      "off_tag": "%OFF"
+    },
+    {
+      "imgUrl": "https://d2407na1z3fc0t.cloudfront.net/prodDev/pr_fhijtgw0ctk/2/prod_display_image/1613378298.5141--2021-02-1514:08:18--738?format=webp",
+      "name": "Chicken Soup Bones - (Classic)",
+      "des": "Mildly seasoned chicken bones that make a delicious, he...",
+      "description":"There's nothing better than fresh, homemmade broth to make delicious stews, soups and more!The bones are thoroughly cleaned and lightly seasoned to make things easier and help you cut down on prep time! Add them to water and boil to create a mild and nutrient-rich soup, or add additional spices to enhance their flavour.Once your broth is ready, use it for soups, stews, pasta, curries or enjoy it as it.",
+      "net_tag": "Net wt",
+      "net": 1000,
+      "gross_tag": "Gross:",
+      "gross": "1026",
+      "unit": "gms",
+      "price_tag": "MRP:",
+      "cuurency": "₹",
+      "price": 89,
+      "strikedPrice": 9,
+      "off": "",
+      "off_tag": "%OFF",
+      "No_off_pices":"11-12",
+      "Serves ":"2",
+      "cookigtime":"40-45min"
+    },
+    {
+      "imgUrl": "https://d2407na1z3fc0t.cloudfront.net/prodDev/pr_ikuk3ilucko/2/prod_display_image/1634458067.3282--2021-10-1713:37:47--905?format=webp",
+      "name": "Afghani Murgh Seekh Kebab | Ready in 8 Minutes",
+      "des": "The classic chicken seekh kebab, marinated in tradition..",
+      "description":"Meat minced from tender cuts of the chicken is shaped in to perfect ready-to-cook kebabs after it is mixed with spices and herbs. The authentic Afghani Murgh Seekh Kebab is ideal for pan-frying or grilling. When evenly cooked, the kebab turns charred on the outside and succulent on the inside. Order Afghani Murgh Seekh Kebabs from Licious and get them home delivered.",
+      "net_tag": "Net wt:",
+      "net:": "4",
+      "gross_tag": "Gross:",
+      "gross": "1026",
+      "unit": "gms",
+      "price_tag": "MRP:",
+      "cuurency": "₹",
+      "price": 224,
+      "strikedPrice": 49,
+      "off": "",
+      "off_tag": "%OFF",
+      "No_off_pices":"4",
+      "cookigtime":"5-7min",
+      "Serves ":"2-3"
+    },
+  
+    {
+      "imgUrl": "https://dao54xqhg9jfa.cloudfront.net/OMS-ProductMerchantdising/406279ca-cf70-479b-a9c2-170e10c23eec/original/Chunky-Shawarma-Chicken-Spread_(7).jpg?format=webp",
+      "name": "Chunky Shawarma Chicken Spread",
+      "des": "A creamy base with freshly roasted chicken chunks along w..",
+      "net_tag": "Net wt:",
+      "net": "200",
+      "gross_tag": "Gross:",
+      "gross": "200",
+      "unit": "gms",
+      " price_tag": "MRP:",
+      "cuurency": "₹",
+      "price": "100",
+      "strikePrice": "",
+      "off": "",
+      "off_tag": "%OFF"
+    },
+
+    {
+      "imgUrl": "https://dao54xqhg9jfa.cloudfront.net/OMS-ProductMerchantdising/2442c92c-09b9-449d-bcce-defbf856fede/original/Chunky-Continental-Chicken-Spread.jpg?format=webp",
+      "name": "Chunky Continental Chicken Spread",
+      "des": "A meaty delight mix of freshly roasted chicken chunks, crushe..",
+      "net_tag": "Net wt:",
+      "net": "200",
+      "gross_tag": "Gross:",
+      "gross": "200",
+      "unit": "gms",
+      " price_tag": "MRP:",
+      "cuurency": "₹",
+      "price": "149",
+      "strikePrice": "",
+      "off": "",
+      "off_tag": "%OFF"
+    },
+
+    {
+      "imgUrl": "https://d2407na1z3fc0t.cloudfront.net/prodDev/pr_4cyjya5vxs7/2/prod_display_image/1634635913.0319--2021-10-1915:01:53--1818?format=webp",
+      "name": "Chunky Butter Chicken Spread (Single Serve)",
+      "des": "Mildly spiced chunks of freshly roasted chicken blended...",
+      "net_tag": "Net wt:",
+      "net": "35",
+      "gross_tag": "Gross:",
+      "gross": "35",
+      "unit": "gms",
+      " price_tag": "MRP:",
+      "cuurency": "₹",
+      "price": "29",
+      "strikePrice": "",
+      "off": "",
+      "off_tag": "%OFF"
+    },
+
+    {
+      "imgUrl": "https://d2407na1z3fc0t.cloudfront.net/prodDev/pr_4q4jya5uwj4/2/prod_display_image/1634646348.4348--2021-10-1917:55:48--1818?format=webp",
+      "name": "Chunky Continental Chicken Spread (Single Serve)",
+      "des": "A meaty delight mix of freshly roasted chicken chunks, cr...",
+      "net_tag": "Net wt:",
+      "net": "300",
+      "gross_tag": "Gross:",
+      "gross": "350",
+      "unit": "gms",
+      " price_tag": "MRP:",
+      "cuurency": "₹",
+      "price": "31",
+      "strikePrice": "",
+      "off": "",
+      "off_tag": "%OFF"
+    }
+    
+
+  ],
+  "tempo":[
+    {
+      "imgUrl": "https://d2407na1z3fc0t.cloudfront.net/prodDev/pr_av4kgtb3l1h/2/prod_display_image/1631077710.8126--2021-09-0810:38:30--1818",
+      "imgUrl2": "https://dao54xqhg9jfa.cloudfront.net/ProductMerchantdising/3b5b2bd4-d41a-8bd4-2a1e-fe5c571d2f84/original/1586376386.4432--2020-04-0901_36_26--472.jpeg?format=webp",
+      "imgUrl3": "https://d2407na1z3fc0t.cloudfront.net/prodDev/pr_avakgtb7ywh/2/prod_display_image/1631077382.6688--2021-09-0810:33:02--1818",
+      "imgUrl4": "https://d2407na1z3fc0t.cloudfront.net/prodDev/pr_ikuk3ilucko/2/prod_display_image/1634458067.3282--2021-10-1713:37:47--905?format=webp",
+      "name": "Chicken Curry Cut (Small Pcs) - Large Pack",
+      "des": "Bone-in chunky pieces of skinless meat including Two le...",
+      "description":"With our Chicken Curry Cut on hand, making a delicious chicken curry has never been easier!.Licious Chicken Curry Cut is a mix of bone-in, small pieces of breast, wing (without the tip), leg and thigh meat, enough to feed a small to medium-sized family. This Small pack consists of 13-16 pieces of smaller cuts of chicken, for when you are making a smaller portion of curry or looking to reduce cooking time. Smaller pieces of chicken cook faster because of the higher surface-to-volume ratio.",
+     
+      "net_tag": "Net wt:",
+      "net": 1000,
+      "gross_tag": "Gross:",
+      "gross_wt": 1026,
+      "unit": "gms",
+      "price_tag": "MRP:",
+      "cuurency": "₹",
+      "price": 271,
+      "strikedPrice": "350",
+      "off": "",
+      "off_tag": "%OFF",
+      "No_off_pices":"26-34",
+      "Serves ":"6",
+      "No_off_piceslogo":"https://d2407na1z3fc0t.cloudfront.net/Banner/Pieces.png",
+      "Serveslogo":"https://d2407na1z3fc0t.cloudfront.net/Banner/Serves.png",
+      "gross_wtlogo":"https://d2407na1z3fc0t.cloudfront.net/Banner/Chicken.png",
+      "netwetlogo":"https://d2407na1z3fc0t.cloudfront.net/Banner/Netwt.png"
+
+    }
+  ],
+  "TheLicious_way":[
+    {
+      "imgUrl":"https://www.licious.in/img/rebranding/landing/USP1.png",
+      "desc":"Premium produce, sourced directly from the origin"
+    },{
+      "imgUrl":"https://www.licious.in/img/rebranding/landing/USP2.png",
+      "desc":"Scientifically designed central production Unit"
+
+    },
+    {
+      "imgUrl":"https://www.licious.in/img/rebranding/landing/USP3.png",
+      "desc":"Compliance to stringent quality checks"
+
+    },
+    {
+      "imgUrl":"https://www.licious.in/img/rebranding/landing/USP4.png",
+      "desc":"Delivered fresh everyday"
+
+    },
+    {
+      "imgUrl":"https://www.licious.in/img/rebranding/landing/USP5.png",
+      "desc":"Experience extraordinary cooking"
+
+    }
   ]
+
 }
