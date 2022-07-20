@@ -12,7 +12,7 @@
 </html>
 <script>
   let getdata = async () => {
-    let res = await fetch("http://localhost:3000/api/items");
+    let res = await fetch("http://localhost:3000/api/Chicken_Data");
     let data = await res.json();
     console.log(data);
     appenvalue(data);
@@ -28,7 +28,7 @@
     //   div.setAttribute("id", "meals");
 
       let name = document.createElement("p");
-      name.innerHTML = val.strMeal;
+      name.innerHTML = val.name;
 
       let image = document.createElement("img");
       image.src = val.imgUrl;
