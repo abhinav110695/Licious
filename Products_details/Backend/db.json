@@ -1,5 +1,5 @@
 {
-  "items": [
+  "Mutton_Data": [
     {
       "imgUrl": "https://d2407na1z3fc0t.cloudfront.net/prodDev/pr_av4kgtb3l1h/2/prod_display_image/1631077710.8126--2021-09-0810:38:30--1818",
       "name": "Chicken Curry Cut (Small Pcs) - Large Pack",
@@ -249,8 +249,9 @@
       "strikedPrice": "640",
       "off": "",
       "off_tag": "%OFF"
-    },
-
+    }
+  ],
+  "Chicken_Data": [
     {
       "imgUrl": "https://d2407na1z3fc0t.cloudfront.net/prodDev/pr_fhijtgw0ctk/2/prod_display_image/1613378298.5141--2021-02-1514:08:18--738?format=webp",
       "name": "Chicken Soup Bones - (Classic)",
@@ -490,8 +491,9 @@
       "strikedPrice": "199",
       "off": "",
       "off_tag": "%OFF"
-    },
-
+    }
+  ],
+  "Dishes_of_chicken": [
     {
       "imgUrl": "https://d2407na1z3fc0t.cloudfront.net/prodDev/pr_av4kgtb3l1h/2/prod_display_image/1631077710.8126--2021-09-0810:38:30--1818",
       "name": "Chicken Curry Cut (Small Pcs) - Large Pack",
@@ -685,4 +687,4 @@
       "off_tag": "%OFF"
     }
   ]
-}
+  }
