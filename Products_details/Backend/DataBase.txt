@@ -1,0 +1,8 @@
+
+
+Five Type of data stored in our data Base:
+1.Mutton_Data
+2.Chicken_Data
+3.Dishes_of_chicken
+4.sauce
+5.fish
