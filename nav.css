@@ -1,0 +1,143 @@
+*{
+    margin:0; 
+    padding:0;
+}
+#navbar{
+    height:80px;
+    width:auto;
+    /* border:1px solid black; */
+    display: flex;
+    justify-content:space-around;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+img{
+    height:80%;
+    width:100px;
+    margin-left:100px;
+    margin-top:-12px;
+}
+input{
+    height:40px;
+    width:450px;
+    margin-top: 25px;
+    border-radius: 5px;
+    border:1;
+    border-color: rgb(236, 233, 233);
+    box-shadow: rgba(255, 255, 255, 0.2) 0px 0px 0px 1px inset,
+}
+p{
+    margin-left:15px;
+    
+}
+#cat{
+    height:30px;
+    width:30px;
+    margin-top: 25px;
+    margin-left:80px;
+}
+p{
+    margin-top: 25px;
+    margin-left: -35px;
+}
+#cate{
+    display: flex;
+    justify-content: space-around;
+    /* align-items: center; */
+}
+#cate p{
+    font-size: 15px;
+    margin-left:12px;
+    margin-top:35px;
+}
+#pot{
+     display: flex;
+    justify-content: space-evenly;
+    /* margin-left:-60px; */
+}
+#pot p{
+    font-size: 15px;
+    margin-left:12px;
+    margin-top:35px;
+}
+#location{
+    margin-top:10px;
+    float: left;
+    overflow: hidden;
+}
+
+#location>p{
+  margin-left:10px;
+}
+#location>img{
+  height:30px;
+    width:30px;
+}
+a{
+    text-decoration: none;
+    margin-top:35px;
+}
+
+
+
+
+/* dropDown content  */
+.dropdown {
+    float: left;
+    overflow: hidden;
+  }
+  
+  /* Dropdown button */
+  .dropdown .dropbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: black;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit; 
+    margin: 0;
+  }
+  
+  .navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: #ddd;
+  }
+  
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 28px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+
+  .dropdown-content a {
+    float: none;
+    color: black;
+    padding: 14px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  
+  .dropdown-content a:hover {
+    background-color: #ddd;
+  }
+  
+ 
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  .dropdown-content>a>img{
+    height:30px;
+    width:30px;
+    margin-left:12px;
+    margin-right:8px;
+}
+ .dropbtn {
+    color:black;
+ }
+

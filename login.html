@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>signin/signup</title>
+    <link rel="stylesheet" href="nav.css">
+    <style>
+        #sidebar_close{
+           height:600px;
+           width:30%;
+           margin-left:70%;
+           border:1px solid white;
+        }
+        #sidebar_close{
+            background-image: url("https://www.licious.in/img/rebranding/user-login.png");
+            background-position: 0vh;
+         background-size: cover;
+        }
+
+       
+        #scroll{
+            height:300px;
+            width:80%;
+            /* border:1px solid black; */
+            border-radius: 15px;
+            background-color: white;
+            margin:auto;
+            margin-top:200px;
+            margin-left:30px;
+        }
+        #scroll h3{
+            font-size:25px;
+           margin-top:55px;
+            margin-left:85px;
+        }
+       #enter{
+            color:grey;
+            margin-left:30px;
+        }
+        #in{
+            width:80%;
+            margin:auto;
+            margin-top:20px;
+            margin-left:25px;
+            text-align: center;
+            border:0;
+            box-shadow: rgba(22, 22, 24, 0.1) 0px 10px 10px -10px;
+        }
+        button{
+            height:35px;
+            width:80%;
+            border:0;
+            margin-top:25px;
+            margin-left:25px;
+            background-color:Black;
+            color:white;
+        }
+        button:hover{
+            color:white;
+            font-weight: bold;
+            background-color: chartreuse;
+            cursor: pointer;
+        }
+
+        #term{
+            font-size:15px;
+            margin-left:55px;
+        }
+        .red{
+            color:red;
+            margin-left:76px;
+            margin-top:4px;
+        }
+       
+
+    </style>
+</head>
+<body>
+    <div id="navbar">
+        <a href="navbar.html"><img src="https://www.licious.in/img/rebranding/licious-logo.svg" alt="licious"></a>
+        <div id="location">   <select name="select" id="select"></select></div>
+                <input type="text" placeholder="Search For Any Delicious Product">
+               
+               <div id="cate">
+                <img id="cat" src="https://www.licious.in/img/rebranding/category-dropdown-icon.svg" alt="category">
+                <div class="dropdown">
+                    <p class="dropbtn">Categories
+                      <i class="fa fa-caret-down"></i>
+                    </p>
+                    <div class="dropdown-content">
+                        <a href="#"> <img src="https://dao54xqhg9jfa.cloudfront.net/OMS-Category/479a9750-d9a2-33ff-0693-3044a9dcae91/original/Chicken.png" alt="chicken">Chicken</a>
+                        <a href="#"><img src="https://dao54xqhg9jfa.cloudfront.net/OMS-Category/46494180-ff34-2236-4240-da12222c4d23/original/Fish___Seafood.png" alt="fish">Fish & SeaFood</a>
+                        <a href="#"><img src="https://dao54xqhg9jfa.cloudfront.net/OMS-Category/952cc910-319c-0b5d-fa34-373f05f0917a/original/Mutton.png" alt="mutton">Mutton</a>
+                    </div>
+                  </div>
+               </div> 
+               <div id="cate">
+                <img id="cat" src="https://www.licious.in/img/rebranding/profile_icon.svg" alt="account">
+                <p>Login</p>
+               </div> 
+               <div id="pot">
+                <img id="cat" src="https://www.licious.in/img/rebranding/cart_icon.svg" alt="cart">
+                <p>Cart</p>
+               </div> 
+            </div>
+
+            <!-- part-2.. -->
+            <div id="sidebar_close">
+                <div id="scroll">
+                    <h3>Signin / Signup</h3>
+                    <p id="enter">Enter Mobile Number</p>
+                    <input id="in" type="text" placeholder="">
+                    <button>Proceed Via OTP</button>
+                    <p id="term">By signing in you agree to our </p>
+                    <p class="red">Terms and conditions</p>
+                </div>
+                </div>
+              
+               
+</body>
+</html>
+
+     <script>
+      let arrow = document.querySelectorAll(".arrow");
+      for (var i = 0; i < arrow.length; i++) {
+        arrow[i].addEventListener("click", (e)=>{
+       let arrowParent = e.target.parentElement.parentElement;//selecting main parent of arrow
+       arrowParent.classList.toggle("showMenu");
+        });
+      }
+      let sidebar = document.querySelector(".sidebar");
+      let sidebarBtn = document.querySelector(".bx-menu");
+      console.log(sidebarBtn);
+      sidebarBtn.addEventListener("click", ()=>{
+        sidebar.classList.toggle("close");
+      });
+     </script>
