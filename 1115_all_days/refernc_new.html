@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="melass"></div>
+  </body>
+</html>
+<script>
+  let getdata = async () => {
+    let res = await fetch("http://localhost:3000/api/Chicken_Data");
+    let data = await res.json();
+    console.log(data);
+    appenvalue(data);
+    // getdatsasa(data);
+  };
+  getdata();
+
+  function appenvalue(value) {
+    let box = document.getElementById("melass");
+    box.innerHTML = null;
+    value.forEach(function (val) {
+      let div = document.createElement("div");
+    //   div.setAttribute("id", "meals");
+
+      let name = document.createElement("p");
+      name.innerHTML = val.name;
+
+      let image = document.createElement("img");
+      image.src = val.imgUrl;
+
+      let price = document.createElement("p");
+      price.innerHTML = "₹ : " + val.price;
+
+      let rating = document.createElement("span");
+      rating.innerHTML = "ℛ : " + val.des;
+
+      div.append(image, name, price, rating);
+
+      box.append(div);
+    });
+  }
+</script>

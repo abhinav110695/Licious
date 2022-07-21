@@ -1,0 +1,126 @@
+
+
+
+.timimg_img{
+    height: 100%; 
+}
+.timimg_text{
+    color: grey; 
+}
+.vishwa_addtocartbtn{ font-size: 11px;
+text-transform: uppercase;
+color: #fff;
+border: none;
+padding: 10px 12px;
+cursor: pointer;
+font-weight: 600;
+border-radius: 5px;
+background-color: var(--theme-color);
+--theme-color: #D11243;
+height: 30px;
+width: 100px;
+font-size: 11px;
+   
+
+font-weight: 600;
+border-radius: 3px;
+}
+.div_3_wala{
+    border: blue 1px solid; 
+    height: 30px; width: 150px; display: flex;
+    gap: 5px;
+    align-items: center; justify-content: center;
+} 
+.v_plus{
+height: 100%; border-radius: 50%; width: 20px;
+}
+.v_minus{
+    height: 100%;
+}
+
+
+
+.timing_div{
+    display: flex;
+    /* border: black 1px solid; */
+    height: 25px;
+    justify-content: center; margin-top: 20px;
+    /* margin-bottom: -10px; */
+    align-items:center; gap: 10px; font-size: 15px;
+}
+
+.vishwa_mrp_div{
+    display: flex;
+    /* border: blue 1px solid; */
+    justify-content: space-between; margin-top: 0px;
+    align-items: center;
+   color: #D11243;        font-family: 'Lato', sans-serif;
+   width: 90%; margin: auto;
+   font-size:15px; font-weight: bolder;
+}
+.vishwa_quantity{
+    display: flex; width: 90%; margin: auto; margin-bottom:10px ;
+    /* border: red 1px solid; */
+    justify-content: flex-start; gap: 30px;
+    font-family: 'Source Sans Pro';
+font-size: 14px;
+font-weight: 600;     color: #4a4a4a;
+    
+}
+.vishwa_net_wt{
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 25px;
+    position: relative;
+    font-family: 'Source Sans Pro';
+    font-size: 14px;
+    font-weight: 600;     color: #4a4a4a;
+    cursor: pointer;
+}
+.vishwa_name{
+    font-size: 15px; margin-left: 5%; margin-top: 25px;
+    margin-bottom: 25px;
+    font-weight: 600;  color: #4a4a4a; 
+   white-space: normal;
+
+  font-family: Lato!important;
+}
+.vishwa_details{
+    margin-left: 5%;
+    font-family: 'Source Sans Pro';
+font-size: 14px;
+color: #727272;
+line-height: 1.2;
+white-space: nowrap;
+margin-bottom: 10px;
+text-overflow: ellipsis;
+overflow: hidden;
+}
+
+#vishwa_body_products_page{ background-color: #F7F6F6;}
+#vishwa_products_grid{
+   
+    display: grid; gap: 25px 15px ; width: 75%; 
+    grid-template-columns: repeat(3,1fr);
+    /* grid-template-rows: repeat(10, 600px); */
+    /* border: red 1px solid; */
+    margin: auto; 
+    margin-top: 100px;
+}
+
+.vishwa_cart{
+    height: 100%; width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;    
+    border-radius: 10px;
+    height: 450px; margin-bottom: 20px;
+    display: block;
+}
+
+.vishwa_img{
+    height: 50%; width: 100%;  border-radius: 10px;
+}
+
+*{
+Padding: 0px;
+Margin: 0px ;
+}
