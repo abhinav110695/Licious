@@ -36,7 +36,7 @@ function appenvalue(value) {
     desc2.innerHTML = val.des;
 
     let No_off_pices = document.createElement("h5");
-    No_off_pices.innerHTML = "No. of Pieces"+ val.No_off_pices ;
+    No_off_pices.innerHTML = "No. of Pieces : "+ val.No_off_pices ;
 
 
     let No_off_piceslogo = document.createElement("img");
@@ -44,10 +44,10 @@ function appenvalue(value) {
     No_off_piceslogo.setAttribute("id","weigthLogo")
 
     let Serves = document.createElement("h5");
-    Serves.innerHTML = val.Serves;
+    Serves.innerHTML = "Serves "+val.Serves;
 
     let Serveslogo = document.createElement("img");
-    Serveslogo.src = val.Serveslogo; 
+    Serveslogo.src =  val.Serveslogo; 
     Serveslogo.setAttribute("id","weigthLogo1")
 
     let div3 = document.createElement("div");
@@ -57,13 +57,102 @@ function appenvalue(value) {
     div4.setAttribute("id","div1_weigth1");
     div4.append(No_off_piceslogo,No_off_pices, Serveslogo,Serves);
 
+    let gross_wt = document.createElement("h5");
+    gross_wt.innerHTML = "Gross Wt." + val.gross_wt;
+
+    let gross_wtlogo = document.createElement("img");
+    gross_wtlogo.src = val.gross_wtlogo;
+    gross_wtlogo.setAttribute("id","weigthLogo1")
+
+    let net_wt = document.createElement("h5"); 
+    net_wt.innerHTML = "Net wt."+val.net;
+
+    let netwetlogo = document.createElement("img");
+    netwetlogo.src = val.netwetlogo;
+    netwetlogo.setAttribute("id","weigthLogo1")
+
     let div5 = document.createElement("div");
     div5.setAttribute("id","div1_weigth2");
+    div5.append(gross_wtlogo,gross_wt,netwetlogo,net_wt)
+
+
+    let div6 = document.createElement("div");
+    div6.setAttribute("id","div1_weigthlast")
+
+    let div7 = document.createElement("div");
+    div7.setAttribute("id","div1_weigthlast2");
+
+    
+
+    let price_tag = document.createElement("h5");
+    price_tag.innerHTML = val.price_tag 
+    price_tag.setAttribute("id","div1_weigthlastpricetag")
+
+
+    let price   = document.createElement("h3");
+    price.innerHTML =  " ₹ "+val.price
+    price.setAttribute("id","div1_weigthlastprice")
+
+    let CartButton2 = document.createElement("div");
+    CartButton2.setAttribute("id", "stylingBtn1");
+
+    let substruct = document.createElement("button");
+    substruct.setAttribute("id", "div_3CartBtn4");
+    substruct.innerHTML = "-";
+
+    let center = document.createElement("button");
+    center.setAttribute("id", "div_3CartBtn5");
+    center.innerHTML = "Add to cart";
+
+    let jor = document.createElement("button");
+    jor.setAttribute("id", "div_3CartBtn6");
+    jor.innerText = "+";
+
+    center.addEventListener("click", () => {
+        alert("click")
+      if (center.innerHTML  == "Add to cart") {
+        center.innerHTML = 0;
+        jor.style.display = "inline-block";
+        substruct.style.display = "inline-block";
+      }
+    });
+    substruct.addEventListener("click", () => {
+        center.innerHTML = (center.innerHTML) - 1;
+        if(center.innerHTML < 1){
+            substruct.style.display = "none";
+
+        }else if((center.innerHTML == -1 && center.innerHTML == 0)){
+            jor.style.display = "inline-block";
+            center.innerHTML  == "Add to cart"
+        }
+    });
+    jor.addEventListener("click", () => {
+        center.innerHTML = +(center.innerHTML)+ +1;
+        if(center.innerHTML == 6){
+            jor.style.display = "none";
+
+        }else if((center.innerHTML == -1 && center.innerHTML == 0)){
+            center.innerHTML  == "Add to cart"
+        }
+      });
+
+      let bikelogo = document.createElement("img");
+      bikelogo.src = val.bikelogo
+
+      let bikeContnt = document.createElement("p");
+      bikeContnt.innerHTML = val.bikeContnt;
+
+      div7.append(bikelogo,bikeContnt)
+
+    CartButton2.append(substruct, center, jor);
+
+
+    div6.append(price_tag,price,CartButton2)
 
     div3.append(div4,div5)
 
     div.append(image);
-    div2.append(name,  desc2,desc,div3);
+    div2.append(name,  desc2,desc,div3,div6,div7);
 
     box.append(div, div2);
   });
@@ -258,12 +347,15 @@ function appendSlideNews(dated) {
     CartButton.setAttribute("id", "stylingBtn");
     CartButton.append(minus, main, add);
 
+    let bikelogo = document.createElement("img");
+    bikelogo.src = e.bikelogo
+
    
 
     div2.append(net_tag, net, n_gm, gross_tag, gross, g_gm);
     div3.append(price_tag, cuurency, price, strikePrice, CartButton);
 
-    div.append(img, name, des, div2, div3);
+    div.append(img, name, des, div2, div3,bikelogo);
 
     card2.append(div);
     document.getElementById("slideNews").append(card2);
@@ -330,3 +422,14 @@ LiciousDataappend = (data) => {
     box.append(div);
   });
 };
+
+
+
+////-------------------------------------------------------------
+
+$( document ).ready(function() {
+	$('#headerVideoLink').magnificPopup({
+	type:'inline',
+	midClick: true 
+	});
+});
