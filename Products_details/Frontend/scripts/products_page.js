@@ -20,11 +20,11 @@ function appenvalue(value) {
     let image = document.createElement("img");
     image.src = val.imgUrl;
     let image2 = document.createElement("img");
-    image2.src = val.imgUrl2;
+    image2.src = val.imgUrl1;
     let image3 = document.createElement("img");
-    image3.src = val.imgUrl3;
-    let image4 = document.createElement("img");
-    image4.src = val.imgUrl4;
+    image3.src = val.imgUrl2;
+    // let image4 = document.createElement("img");
+    // image4.src = val.imgUrl3;
 
     let name = document.createElement("h3");
     name.innerHTML = val.name;
@@ -135,6 +135,18 @@ function appenvalue(value) {
     let bikeContnt = document.createElement("p");
     bikeContnt.innerHTML = val.bikeContnt;
 
+    let div8 = document.createElement("div");
+    div8.setAttribute("id", "div1_imageslast");
+
+    let div9 = document.createElement("div");
+
+    let span1 = document.createElement("span");
+    span1.setAttribute("class", "dot");
+    let span2 = document.createElement("span");
+    span2.setAttribute("class", "dot");
+    let span3 = document.createElement("span");
+    span3.setAttribute("class", "dot");
+
     div7.append(bikelogo, bikeContnt);
 
     CartButton2.append(substruct, center, jor);
@@ -143,11 +155,37 @@ function appenvalue(value) {
 
     div3.append(div4, div5);
 
-    div.append(image);
+    let images = div8.append(image, image2, image3);
+
+    div9.append(span1, span2, span3);
+    // div.append(div8, div9);
+    // div.append(image,image2,image3);
     div2.append(name, desc2, desc, div3, div6, div7);
 
     box.append(div, div2);
   });
+
+  let slideIndex = 0;
+  showSlides();
+
+  function showSlides() {
+    let i;
+    let slides = document.getElementsByClassName();
+    let dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {
+      slideIndex = 1;
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].className += " active";
+    setTimeout(showSlides, 2000); // Change image every 2 seconds
+  }
 }
 
 //---------------------------------------------------------------------------------------------------------------
@@ -401,12 +439,29 @@ function scoailmedaiDataappend(data) {
     div4.append(logofoo, nameOfood);
     div.append(img, div2, div3, div4);
     box.append(div);
-    
   });
-
 }
 
+// <!------------------------------------------SLIDE---SHOW-------------------------------------------------------------------------------------!>
 
+let slideIndex = 0;
+showSlides();
 
-
-
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {
+    slideIndex = 1;
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex - 1].style.display = "block";
+  dots[slideIndex - 1].className += " active";
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
+}

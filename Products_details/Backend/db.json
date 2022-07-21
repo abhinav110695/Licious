@@ -1385,9 +1385,8 @@
   "tempo": [
     {
       "imgUrl": "https://d2407na1z3fc0t.cloudfront.net/prodDev/pr_av4kgtb3l1h/2/prod_display_image/1631077710.8126--2021-09-0810:38:30--1818",
-      "imgUrl2": "https://dao54xqhg9jfa.cloudfront.net/ProductMerchantdising/3b5b2bd4-d41a-8bd4-2a1e-fe5c571d2f84/original/1586376386.4432--2020-04-0901_36_26--472.jpeg?format=webp",
-      "imgUrl3": "https://d2407na1z3fc0t.cloudfront.net/prodDev/pr_avakgtb7ywh/2/prod_display_image/1631077382.6688--2021-09-0810:33:02--1818",
-      "imgUrl4": "https://d2407na1z3fc0t.cloudfront.net/prodDev/pr_ikuk3ilucko/2/prod_display_image/1634458067.3282--2021-10-1713:37:47--905?format=webp",
+      "imgUrl1": "https://d2407na1z3fc0t.cloudfront.net/prodDev/pr_av4kgtb3l1h/2/prod_image/1631077714.4492--2021-09-0810:38:34--1818",
+      "imgUrl2": "https://d2407na1z3fc0t.cloudfront.net/prodDev/pr_av4kgtb3l1h/2/prod_image/1632404503.7095--2021-09-2319:11:43--1818",
       "name": "Chicken Curry Cut (Small Pcs) - Large Pack",
       "des": "Bone-in chunky pieces of skinless meat including Two le...",
       "description": "With our Chicken Curry Cut on hand, making a delicious chicken curry has never been easier!.Licious Chicken Curry Cut is a mix of bone-in, small pieces of breast, wing (without the tip), leg and thigh meat, enough to feed a small to medium-sized family. This Small pack consists of 13-16 pieces of smaller cuts of chicken, for when you are making a smaller portion of curry or looking to reduce cooking time. Smaller pieces of chicken cook faster because of the higher surface-to-volume ratio.",
@@ -1401,15 +1400,15 @@
       "price": 271,
       "strikedPrice": "350",
       "off": "",
-      "off_tag":"%OFF",
-      "No_off_pices":"26-34",
-      "Serves":"6",
-      "No_off_piceslogo":"https://d2407na1z3fc0t.cloudfront.net/Banner/Pieces.png",
+      "off_tag": "%OFF",
+      "No_off_pices": "26-34",
+      "Serves": "6",
+      "No_off_piceslogo": "https://d2407na1z3fc0t.cloudfront.net/Banner/Pieces.png",
       "Serveslogo": "https://d2407na1z3fc0t.cloudfront.net/Banner/Serves.png",
-      "gross_wtlogo":"https://d2407na1z3fc0t.cloudfront.net/Banner/Chicken.png",
-      "netwetlogo":"https://d2407na1z3fc0t.cloudfront.net/Banner/Netwt.png",
-      "bikelogo":"https://www.licious.in/img/rebranding/express_delivery.svg",
-      "bikeContnt":"Tommorow 8AM - 11AM"
+      "gross_wtlogo": "https://d2407na1z3fc0t.cloudfront.net/Banner/Chicken.png",
+      "netwetlogo": "https://d2407na1z3fc0t.cloudfront.net/Banner/Netwt.png",
+      "bikelogo": "https://www.licious.in/img/rebranding/express_delivery.svg",
+      "bikeContnt": "Tommorow 8AM - 11AM"
     }
   ],
   "TheLicious_way": [
@@ -1436,48 +1435,49 @@
   ],
   "socailMedia": [
     {
-      "imgUrl":"https://d2407na1z3fc0t.cloudfront.net/cmssocails_/18/cmssocails_59b666d07fd06",
-      "insatphto":"https://d2407na1z3fc0t.cloudfront.net/cmssocails_/4/cmssocails_5989eaf043a52",
-      "insatalogo":"https://s3-ap-southeast-1.amazonaws.com/liciousdev/Banner/instagram-logo.png",
-      "#desc1":"",
-      "#desc2":"",
-      "logofoo":"https://www.licious.in/img/rebranding/chicken-leg2.png",
-      "name":"Chicken Lollipops"
+      "imgUrl": "https://d2407na1z3fc0t.cloudfront.net/cmssocails_/18/cmssocails_59b666d07fd06",
+      "insatphto": "https://d2407na1z3fc0t.cloudfront.net/cmssocails_/4/cmssocails_5989eaf043a52",
+      "insatalogo": "https://s3-ap-southeast-1.amazonaws.com/liciousdev/Banner/instagram-logo.png",
+      "#desc1": "",
+      "#desc2": "",
+      "logofoo": "https://www.licious.in/img/rebranding/chicken-leg2.png",
+      "name": "Chicken Lollipops"
     },
     {
-      "imgUrl":"https://d2407na1z3fc0t.cloudfront.net/cmssocails_/18/cmssocails_59b666dfe1643",
-      "insatphto":"https://d2407na1z3fc0t.cloudfront.net/cmssocails_/4/cmssocails_5989eaf043a52",
-      "insatalogo":"https://s3-ap-southeast-1.amazonaws.com/liciousdev/Banner/instagram-logo.png",
-      "#desc1":"",
-      "#desc2":"",
-      "logofoo":"https://www.licious.in/img/rebranding/chicken-leg2.png",
-      "name":"Garlic Chicken Cheese Balls"
+      "imgUrl": "https://d2407na1z3fc0t.cloudfront.net/cmssocails_/18/cmssocails_59b666dfe1643",
+      "insatphto": "https://d2407na1z3fc0t.cloudfront.net/cmssocails_/4/cmssocails_5989eaf043a52",
+      "insatalogo": "https://s3-ap-southeast-1.amazonaws.com/liciousdev/Banner/instagram-logo.png",
+      "#desc1": "",
+      "#desc2": "",
+      "logofoo": "https://www.licious.in/img/rebranding/chicken-leg2.png",
+      "name": "Garlic Chicken Cheese Balls"
     },
     {
-      "imgUrl":"https://d2407na1z3fc0t.cloudfront.net/cmssocails_/18/cmssocails_59b666fe1f7e4",
-      "insatphto":"https://d2407na1z3fc0t.cloudfront.net/cmssocails_/4/cmssocails_5989eaf043a52",
-      "insatalogo":"https://s3-ap-southeast-1.amazonaws.com/liciousdev/Banner/instagram-logo.png",
-      "#desc1":"",
-      "#desc2":"",
-      "logofoo":"https://www.licious.in/img/rebranding/chicken-leg2.png",
-      "name":"Grilled Chicken Rolls"
-    },{
-      "imgUrl":"https://d2407na1z3fc0t.cloudfront.net/cmssocails_/18/cmssocails_59b6674bd2f59",
-      "insatphto":"https://d2407na1z3fc0t.cloudfront.net/cmssocails_/4/cmssocails_5989eaf043a52",
-      "insatalogo":"https://s3-ap-southeast-1.amazonaws.com/liciousdev/Banner/instagram-logo.png",
-      "#desc1":"",
-      "#desc2":"",
-      "logofoo":"https://www.licious.in/img/rebranding/chicken-leg2.png",
-      "name":"Teriyaki Chicken"
-    },{
-      "imgUrl":"https://d2407na1z3fc0t.cloudfront.net/cmssocails_/18/cmssocails_59b6677079fb4",
-      "insatphto":"https://d2407na1z3fc0t.cloudfront.net/cmssocails_/4/cmssocails_5989eaf043a52",
-      "insatalogo":"https://s3-ap-southeast-1.amazonaws.com/liciousdev/Banner/instagram-logo.png",
-      "#desc1":"",
-      "#desc2":"",
-      "logofoo":"https://www.licious.in/img/rebranding/chicken-leg2.png",
-      "name":"Nagaland Pops"
+      "imgUrl": "https://d2407na1z3fc0t.cloudfront.net/cmssocails_/18/cmssocails_59b666fe1f7e4",
+      "insatphto": "https://d2407na1z3fc0t.cloudfront.net/cmssocails_/4/cmssocails_5989eaf043a52",
+      "insatalogo": "https://s3-ap-southeast-1.amazonaws.com/liciousdev/Banner/instagram-logo.png",
+      "#desc1": "",
+      "#desc2": "",
+      "logofoo": "https://www.licious.in/img/rebranding/chicken-leg2.png",
+      "name": "Grilled Chicken Rolls"
+    },
+    {
+      "imgUrl": "https://d2407na1z3fc0t.cloudfront.net/cmssocails_/18/cmssocails_59b6674bd2f59",
+      "insatphto": "https://d2407na1z3fc0t.cloudfront.net/cmssocails_/4/cmssocails_5989eaf043a52",
+      "insatalogo": "https://s3-ap-southeast-1.amazonaws.com/liciousdev/Banner/instagram-logo.png",
+      "#desc1": "",
+      "#desc2": "",
+      "logofoo": "https://www.licious.in/img/rebranding/chicken-leg2.png",
+      "name": "Teriyaki Chicken"
+    },
+    {
+      "imgUrl": "https://d2407na1z3fc0t.cloudfront.net/cmssocails_/18/cmssocails_59b6677079fb4",
+      "insatphto": "https://d2407na1z3fc0t.cloudfront.net/cmssocails_/4/cmssocails_5989eaf043a52",
+      "insatalogo": "https://s3-ap-southeast-1.amazonaws.com/liciousdev/Banner/instagram-logo.png",
+      "#desc1": "",
+      "#desc2": "",
+      "logofoo": "https://www.licious.in/img/rebranding/chicken-leg2.png",
+      "name": "Nagaland Pops"
     }
   ]
-
 }
