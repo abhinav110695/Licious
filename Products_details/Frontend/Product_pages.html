@@ -324,6 +324,7 @@
   gap: 20px;
   margin-left: 5%;
   margin-right: 5%;
+  overflow: hidden; 
 }
 #slideNews {
   display: flex;
@@ -362,6 +363,53 @@
 #next_home:hover {
   background-color: rgba(0, 0, 0, 0.8);
 }
+
+#slideNews1 {
+  gap: 20px;
+  margin-left: 5%;
+  margin-right: 5%;
+  /* overflow: hidden; */
+}
+#slideNews1 {
+  display: flex;
+  overflow-y: scroll;
+  overflow-y: hidden;
+  scroll-behavior: unset;
+}
+#slideNews1::-webkit-scrollbar {
+  display: none;
+}
+#prev_home1,
+#next_home1 {
+  cursor: pointer;
+  position: absolute;
+  width: auto;
+  margin-top: 180px;
+  padding: 16px;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  margin-right: 5%;
+  margin-left: 0%;
+  border: none;
+  color: black;
+}
+
+
+#next_home1 {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+#prev_home1:hover,
+#next_home1:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+
 #Licious{
     display: flex;
     gap: 60px;
@@ -420,6 +468,7 @@ width: 45px;
     display: inline-block;
     margin-top: 10px;
     text-decoration: none;
+    margin-bottom: 20px;
 }
 
 /* -----------------------------------button 2----------------------------------------- */
@@ -436,22 +485,21 @@ width: 45px;
   margin:0 auto;
 }
 #div1_video{
-  margin-top: -87.5%;
-  margin-left: 54%;
+  margin-top: -124.5%;
+  margin-left: 52%;
 }
 #headerVideoLink{
   color: #e41d36;
   font-size: larger;
   font-weight: bold;
-  /* text-decoration: none; */
 }
 #fa-circle-play{
   background-color: #e41d36;
 }
 #div1_weigthlast2 p{
-  margin-top: 20px;
+  /* margin-top: 20px; */
   font-weight: bold;
-  /* margin-left: 4%; */
+  margin-top: 5%;
 
 }
 #div1_weigthlast2 >img{
@@ -459,15 +507,176 @@ width: 45px;
   height: 40px;
   margin-left: 56%;
 }
+#div4_dataNmae{
+  display: flex;
+  border-radius: 20px;
+  /* border: 2px solid black; */
+  
+}
+#div4_dataNmae> img{
+  height: 24px;
+  border-radius: 20px;
+}
+#div4_dataNmae :nth-child(1) {
+  height: 40px;
+  border-radius: 20px;
+  margin-left: 0px;
+      }
+      #div4_dataNmae :nth-child(2) {
+        height: 1px;
+        margin-left: 10px;
+        margin-top: 8px;
+      }
+      #div4_dataNmae :nth-child(3) {
+        margin-left: 70px;
+        margin-top: 8px;
+      }
+      #div4_dataNmae :nth-child(4) {
+        margin-top: 10px;
+        /* font-weight: 1000; */
+        color: #e41d36;
+        font-size: 16px;
+        margin-left: 4px;
+      }
+      #div4_datapara{
+       margin-left: 4px;
+        margin-top: 5px;
+        height: 40px;
+        width: 100%;
+        overflow: hidden;
+        
+      }
+      #div4_dataparaimage{
+        display: flex;
+        gap: 10px;
+        margin-top: 10px;
+      }
+      #div4_dataparaimage >img{
+        width: 20px;
+        margin-left: 20px;
+      }
+      #div4_socailmedia{
+        display: flex;
+        gap: 25px;
+        width: 66.1%;
+        border: 5px solid black;
+        overflow: hidden;
+        margin-left: 17%;
+       
+        
+      }
+      #div4_cont{
+        height: 450px;
+        width: 690px;
+        gap: 10px;
+        box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+        border-radius: 10px;
+        margin-bottom: 50px;
+
+      }
+      #socailmedaiIMage{
+        width: 100%;
+        height: 70%;
+        border-radius:10px ;
+      }
+      
+
+      /* !----------------------------------------------------------------------------------------------------------- */
+
+      .home_product {
+    width: 90%;
+    margin: auto;
+  position: relative;
+  overflow: hidden;
+  padding: 20px;
+  
+}
+
+.home_product-category {
+    padding-top: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 22px;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+#home_hr{
+    border:0.5px solid rgb(235, 232, 232);
+}
+
+.home_product-container {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+}
+
+.home_product-container::-webkit-scrollbar {
+  display: none;
+}
+
+.home_product-card {
+/* display: flex; */
+  flex: 0 0 auto;
+  width: 210px;
+  height:370px;
+  margin-top: 20px;
+  margin-right: 20px;
+  /* border: 1px solid rebeccapurple; */
+}
+
+.home_product-image {
+  position: relative;
+  width: 100%;
+  height: 330px;
+  overflow: hidden;
+}
+
+.home_product-thumb {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#home_p{
+    font-size: 14px;
+    margin-top: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#home_p:hover{
+    color:rgb(16, 140, 212) ;
+}
+
+.card-btn {
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  border: none;
+  outline: none;
+  color: black;
+  height: 50px;
+  transition: 0.5s;
+  cursor: pointer;
+  opacity:0;
+}
+
+.home_product-card:hover .card-btn {
+  opacity: 0.4;
+}
+
+.card-btn:hover{
+  color: rgb(0, 162, 255);
+  opacity: 0.5;
+}
+
+
 
 
   </style>
   </head>
   <body>
     <div id="div1_ptodct"></div> 
-    <!-- <div id="div3_ptodct"></div> -->
-    
-    <!-- <div id="div3_ptodct"></div> -->
     <div id="div2_line">
         <h3 id="div2_name">The &nbsp; <span id="div2_clor">Licious</span>&nbsp; Way</h3>
     </div>
@@ -485,15 +694,17 @@ width: 45px;
         <p>Cooking with Licious meats is more fun now! Post a picture of your Licious dish on our Instagram page, tag us and use #MadeWithLicious for a chance to be featured on our Instagram page! Happy Cooking!</p>
         <a href="">Check it out &nbsp; <i class="fa-solid fa-angle-right"></i></a>
     </div>
-
-    <div id="div1_video">
+    <div id="slideNews1">
+    </div>
+   <div id="div1_video">
       <p class="text-center mt-5">
         <i class="fa-solid fa-circle-play"></i> <a href="#headerPopup" id="headerVideoLink" target="_blank">See Why Solodev WXP</a>
       </p>
       <div id="headerPopup" class="mfp-hide embed-responsive embed-responsive-21by9">
-        <iframe class="embed-responsive-item" width="854" height="480" src="https://www.youtube.com/embed/qN3OueBm9F4?autoplay=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-    
+        <iframe class="embed-responsive-item" width="854" height="480" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
     </div>
+
+
   </body>
 </html>
 <script src="./scripts/products_page.js"></script>

@@ -36,62 +36,57 @@ function appenvalue(value) {
     desc2.innerHTML = val.des;
 
     let No_off_pices = document.createElement("h5");
-    No_off_pices.innerHTML = "No. of Pieces : "+ val.No_off_pices ;
-
+    No_off_pices.innerHTML = "No. of Pieces : " + val.No_off_pices;
 
     let No_off_piceslogo = document.createElement("img");
     No_off_piceslogo.src = val.No_off_piceslogo;
-    No_off_piceslogo.setAttribute("id","weigthLogo")
+    No_off_piceslogo.setAttribute("id", "weigthLogo");
 
     let Serves = document.createElement("h5");
-    Serves.innerHTML = "Serves "+val.Serves;
+    Serves.innerHTML = "Serves " + val.Serves;
 
     let Serveslogo = document.createElement("img");
-    Serveslogo.src =  val.Serveslogo; 
-    Serveslogo.setAttribute("id","weigthLogo1")
+    Serveslogo.src = val.Serveslogo;
+    Serveslogo.setAttribute("id", "weigthLogo1");
 
     let div3 = document.createElement("div");
-    div3.setAttribute("id","div1_weigth")
+    div3.setAttribute("id", "div1_weigth");
 
     let div4 = document.createElement("div");
-    div4.setAttribute("id","div1_weigth1");
-    div4.append(No_off_piceslogo,No_off_pices, Serveslogo,Serves);
+    div4.setAttribute("id", "div1_weigth1");
+    div4.append(No_off_piceslogo, No_off_pices, Serveslogo, Serves);
 
     let gross_wt = document.createElement("h5");
     gross_wt.innerHTML = "Gross Wt." + val.gross_wt;
 
     let gross_wtlogo = document.createElement("img");
     gross_wtlogo.src = val.gross_wtlogo;
-    gross_wtlogo.setAttribute("id","weigthLogo1")
+    gross_wtlogo.setAttribute("id", "weigthLogo1");
 
-    let net_wt = document.createElement("h5"); 
-    net_wt.innerHTML = "Net wt."+val.net;
+    let net_wt = document.createElement("h5");
+    net_wt.innerHTML = "Net wt." + val.net;
 
     let netwetlogo = document.createElement("img");
     netwetlogo.src = val.netwetlogo;
-    netwetlogo.setAttribute("id","weigthLogo1")
+    netwetlogo.setAttribute("id", "weigthLogo1");
 
     let div5 = document.createElement("div");
-    div5.setAttribute("id","div1_weigth2");
-    div5.append(gross_wtlogo,gross_wt,netwetlogo,net_wt)
-
+    div5.setAttribute("id", "div1_weigth2");
+    div5.append(gross_wtlogo, gross_wt, netwetlogo, net_wt);
 
     let div6 = document.createElement("div");
-    div6.setAttribute("id","div1_weigthlast")
+    div6.setAttribute("id", "div1_weigthlast");
 
     let div7 = document.createElement("div");
-    div7.setAttribute("id","div1_weigthlast2");
-
-    
+    div7.setAttribute("id", "div1_weigthlast2");
 
     let price_tag = document.createElement("h5");
-    price_tag.innerHTML = val.price_tag 
-    price_tag.setAttribute("id","div1_weigthlastpricetag")
+    price_tag.innerHTML = val.price_tag;
+    price_tag.setAttribute("id", "div1_weigthlastpricetag");
 
-
-    let price   = document.createElement("h3");
-    price.innerHTML =  " ₹ "+val.price
-    price.setAttribute("id","div1_weigthlastprice")
+    let price = document.createElement("h3");
+    price.innerHTML = " ₹ " + val.price;
+    price.setAttribute("id", "div1_weigthlastprice");
 
     let CartButton2 = document.createElement("div");
     CartButton2.setAttribute("id", "stylingBtn1");
@@ -109,132 +104,51 @@ function appenvalue(value) {
     jor.innerText = "+";
 
     center.addEventListener("click", () => {
-        alert("click")
-      if (center.innerHTML  == "Add to cart") {
+      alert("click");
+      if (center.innerHTML == "Add to cart") {
         center.innerHTML = 0;
         jor.style.display = "inline-block";
         substruct.style.display = "inline-block";
       }
     });
     substruct.addEventListener("click", () => {
-        center.innerHTML = (center.innerHTML) - 1;
-        if(center.innerHTML < 1){
-            substruct.style.display = "none";
-
-        }else if((center.innerHTML == -1 && center.innerHTML == 0)){
-            jor.style.display = "inline-block";
-            center.innerHTML  == "Add to cart"
-        }
+      center.innerHTML = center.innerHTML - 1;
+      if (center.innerHTML < 1) {
+        substruct.style.display = "none";
+      } else if (center.innerHTML == -1 && center.innerHTML == 0) {
+        jor.style.display = "inline-block";
+        center.innerHTML == "Add to cart";
+      }
     });
     jor.addEventListener("click", () => {
-        center.innerHTML = +(center.innerHTML)+ +1;
-        if(center.innerHTML == 6){
-            jor.style.display = "none";
+      center.innerHTML = +center.innerHTML + +1;
+      if (center.innerHTML == 6) {
+        jor.style.display = "none";
+      } else if (center.innerHTML == -1 && center.innerHTML == 0) {
+        center.innerHTML == "Add to cart";
+      }
+    });
 
-        }else if((center.innerHTML == -1 && center.innerHTML == 0)){
-            center.innerHTML  == "Add to cart"
-        }
-      });
+    let bikelogo = document.createElement("img");
+    bikelogo.src = val.bikelogo;
 
-      let bikelogo = document.createElement("img");
-      bikelogo.src = val.bikelogo
+    let bikeContnt = document.createElement("p");
+    bikeContnt.innerHTML = val.bikeContnt;
 
-      let bikeContnt = document.createElement("p");
-      bikeContnt.innerHTML = val.bikeContnt;
-
-      div7.append(bikelogo,bikeContnt)
+    div7.append(bikelogo, bikeContnt);
 
     CartButton2.append(substruct, center, jor);
 
+    div6.append(price_tag, price, CartButton2);
 
-    div6.append(price_tag,price,CartButton2)
-
-    div3.append(div4,div5)
+    div3.append(div4, div5);
 
     div.append(image);
-    div2.append(name,  desc2,desc,div3,div6,div7);
+    div2.append(name, desc2, desc, div3, div6, div7);
 
     box.append(div, div2);
   });
 }
-
-// let Youmayalsolike = async () => {
-//   let res = await fetch("http://localhost:3000/api/bestSeller");
-//   let data = await res.json();
-//   //   console.log(data);
-//   Youmayalsolikedata(data);
-// };
-// Youmayalsolike();
-
-// function Youmayalsolikedata(data) {
-//   let box = document.getElementById("div3_ptodct");
-//   data.forEach((e) => {
-//     let div = document.createElement("div");
-//     div.setAttribute("id", "div3_cont");
-
-//     let img = document.createElement("img");
-//     img.setAttribute("src", e.imgUrl);
-//     img.setAttribute("id", "div_3image");
-
-//     let name = document.createElement("h4");
-//     name.innerText = e.name;
-
-//     let des = document.createElement("p");
-//     des.innerText = e.des;
-
-//     let div2 = document.createElement("div");
-//     div2.setAttribute("id", "div_3wight");
-
-//     let net_tag = document.createElement("h6");
-//     net_tag.innerText = e.net_tag;
-
-//     let net = document.createElement("h6");
-//     net.innerText = e.net;
-
-//     let n_gm = document.createElement("h6");
-//     n_gm.innerText = e.unit;
-
-//     let gross_tag = document.createElement("h6");
-//     gross_tag.innerText = e.gross_tag;
-
-//     let gross = document.createElement("h6");
-//     gross.innerText = e.gross;
-
-//     let g_gm = document.createElement("h6");
-//     g_gm.innerText = e.unit;
-
-//     let div3 = document.createElement("div");
-//     div3.setAttribute("id", "div_3priceCart");
-
-//     let price_tag = document.createElement("h5");
-//     price_tag.innerText = e.price_tag;
-
-//     let cuurency = document.createElement("h5");
-//     // cuurency.innerText = e.currency;
-
-//     let price = document.createElement("h5");
-//     price.innerText = "₹ : " + e.price;
-
-//     let strikePrice = document.createElement("strike");
-//     strikePrice.innerText = "₹" + e.strikedPrice;
-
-//     let addCart = document.createElement("button");
-//     addCart.setAttribute("id", "div_3CartBtn");
-//     addCart.innerHTML = "Add to minus";
-
-//     //     addCart.addEventListener("click", function () {
-//     //         addToCart(e);
-//     //     });
-
-//     div2.append(net_tag, net, n_gm, gross_tag, gross, g_gm);
-//     div3.append(price_tag, cuurency, price, strikePrice, addCart);
-//     // btndiv.append(addCart)
-
-//     div.append(img, name, des, div2, div3);
-//     //   document.querySelector("#container").append(div);
-//     box.append(div);
-//   });
-// }
 
 //---------------------------------------------------------------------------------------------------------------
 
@@ -243,7 +157,7 @@ async function getSlideData() {
     let response = await fetch("http://localhost:3000/api/bestSeller");
     let users = await response.json();
     appendSlideNews(users);
-    console.log(users);
+    // console.log(users);
   } catch (err) {
     console.log(err);
   }
@@ -268,6 +182,8 @@ function appendSlideNews(dated) {
 
     let div2 = document.createElement("div");
     div2.setAttribute("id", "div_3wight");
+
+    let div4 = document.createElement("div");
 
     let net_tag = document.createElement("h6");
     net_tag.innerText = e.net_tag;
@@ -315,47 +231,47 @@ function appendSlideNews(dated) {
     add.innerText = "+";
 
     main.addEventListener("click", () => {
-        alert("click")
-      if (main.innerHTML  == "Add to cart") {
+      alert("click");
+      if (main.innerHTML == "Add to cart") {
         main.innerHTML = 0;
         add.style.display = "inline-block";
         minus.style.display = "inline-block";
       }
     });
     minus.addEventListener("click", () => {
-        main.innerHTML = (main.innerHTML) - 1;
-        if(main.innerHTML < 0){
-            minus.style.display = "none";
-
-        }else if((main.innerHTML == -1 && main.innerHTML == 0)){
-            add.style.display = "inline-block";
-            main.innerHTML  == "Add to cart"
-        }
+      main.innerHTML = main.innerHTML - 1;
+      if (main.innerHTML < 1) {
+        minus.style.display = "none";
+        main.innerHTML == "Add to cart";
+      }
+      if (main.innerHTML == -1 && main.innerHTML == 0) {
+        add.style.display = "inline-block";
+        main.innerHTML == "Add to cart";
+      }
     });
     add.addEventListener("click", () => {
-        main.innerHTML = +(main.innerHTML)+ +1;
-        if(main.innerHTML == 6){
-            add.style.display = "none";
-
-        }else if((main.innerHTML == -1 && main.innerHTML == 0)){
-            main.innerHTML  == "Add to cart"
-        }
-      });
-
+      main.innerHTML = +main.innerHTML + +1;
+      if (main.innerHTML == 6) {
+        add.style.display = "none";
+      } else if (main.innerHTML == -1 && main.innerHTML == 0) {
+        main.innerHTML == "Add to cart";
+      }
+    });
 
     let CartButton = document.createElement("div");
     CartButton.setAttribute("id", "stylingBtn");
     CartButton.append(minus, main, add);
 
     let bikelogo = document.createElement("img");
-    bikelogo.src = e.bikelogo
+    bikelogo.setAttribute("src", e.netwetlogo);
 
-   
+    // div4.append(bikelogo);
+    // console.log(div4);
 
     div2.append(net_tag, net, n_gm, gross_tag, gross, g_gm);
     div3.append(price_tag, cuurency, price, strikePrice, CartButton);
 
-    div.append(img, name, des, div2, div3,bikelogo);
+    div.append(img, name, des, div2, div3);
 
     card2.append(div);
     document.getElementById("slideNews").append(card2);
@@ -397,11 +313,8 @@ function sideScroll(element, direction, speed, distance, step) {
 let LiciousData = async () => {
   let res = await fetch("http://localhost:3000/api/TheLicious_way");
   let data = await res.json();
-  console.log(data);
+  // console.log(data);
   LiciousDataappend(data);
-  // appenvalue(data);
-  // localStorage.setItem("tempo", JSON.stringify(data));
-  // getdatsasa(data);
 };
 LiciousData();
 
@@ -423,13 +336,77 @@ LiciousDataappend = (data) => {
   });
 };
 
-
-
 ////-------------------------------------------------------------
 
-$( document ).ready(function() {
-	$('#headerVideoLink').magnificPopup({
-	type:'inline',
-	midClick: true 
-	});
+$(document).ready(function () {
+  $("#headerVideoLink").magnificPopup({
+    type: "inline",
+    midClick: true,
+  });
 });
+
+// --------------------------------------------------------------------------------------------------------
+
+let socailmediadata = async () => {
+  let res = await fetch("http://localhost:3000/api/socailMedia");
+  let data = await res.json();
+  //   console.log(data);
+  scoailmedaiDataappend(data);
+};
+socailmediadata();
+
+function scoailmedaiDataappend(data) {
+  let box = document.getElementById("slideNews1");
+  data.forEach((e) => {
+    let div = document.createElement("div");
+    div.setAttribute("id", "div4_cont");
+
+    let div2 = document.createElement("div");
+    div2.setAttribute("id", "div4_dataNmae");
+
+    let div3 = document.createElement("div");
+    div3.setAttribute("id", "div4_datapara");
+
+    let div4 = document.createElement("div");
+    div4.setAttribute("id", "div4_dataparaimage");
+
+    let img = document.createElement("img");
+    img.src = e.imgUrl;
+    img.setAttribute("id", "socailmedaiIMage");
+
+    let image = document.createElement("img");
+    image.src = e.insatphto;
+
+    let image_name = document.createElement("h4");
+    image_name.innerHTML = "HiManshU";
+
+    let insatalogo = document.createElement("img");
+    insatalogo.src = e.insatalogo;
+
+    let insatgrmaNmae = document.createElement("h1");
+    insatgrmaNmae.innerHTML = "Instagram";
+
+    let paragra1insat = document.createElement("p");
+    paragra1insat.innerHTML =
+      "Its time to make these again- Garlic Chicken Cheese Balls! Best in taste and flavours! Yummmmm ???????? ";
+
+    let logofoo = document.createElement("img");
+    logofoo.src = e.logofoo;
+
+    let nameOfood = document.createElement("h4");
+    nameOfood.innerHTML = e.name;
+
+    div2.append(image, image_name, insatalogo, insatgrmaNmae);
+    div3.append(paragra1insat);
+    div4.append(logofoo, nameOfood);
+    div.append(img, div2, div3, div4);
+    box.append(div);
+    
+  });
+
+}
+
+
+
+
+
