@@ -1,5 +1,5 @@
 
-let append=(data,container)=>{
+let homeappend=(data,container)=>{
     data.forEach(({img,title})=>{
         let div=document.createElement("div");
         div.addEventListener("click",()=>{
@@ -44,4 +44,4 @@ let append=(data,container)=>{
     });
 }
 
-export default append;
+export default homeappend;

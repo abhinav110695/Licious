@@ -1,4 +1,4 @@
-import append from "./morefunction.js"
+import homeappend from "./morefunction.js"
 
 
 // #home_1
@@ -10,7 +10,7 @@ home1.addEventListener("click",()=>{
     banner()
 })
 let banner=()=>{
-    window.location.href=""
+    window.location.href="index.html"
 }
 
 
@@ -30,12 +30,74 @@ let home2arr=[
 {img:"https://dao54xqhg9jfa.cloudfront.net/OMS-Category/804e2c47-aa87-e548-8d19-789b1fccb8bb/original/GFD.png",title:"Featured Collections"}
 ]
 let home2=document.querySelector("#home_2")
-append(home2arr,home2)
+homeappend(home2arr,home2)
 
 //#home_3
 let home3=document.querySelector("#home_3")
 let ads_img=document.createElement("img")
 ads_img.src="../homepage_ss/ads.png"
 home3.append(ads_img)
+home3.addEventListener("click",()=>{
+    ad()
+})
+let ad=()=>{
+    window.location.href="index.html"
+}
 
 
+
+//#home_5
+let home5=document.querySelector("#home_5")
+let ads2_img=document.createElement("img")
+ads2_img.src="../homepage_ss/ads2.png"
+home5.append(ads2_img)
+
+//#home_6
+let home6arr=[
+    {img:"https://dao54xqhg9jfa.cloudfront.net/Category/782aa584-4978-2e46-e38a-4aff56f10800/original/1603885852.4258--2020-10-2817_20_52--738.jpeg?format=webp",title:"Today's Deal"},
+    {img:"https://dao54xqhg9jfa.cloudfront.net/OMS-Category/840ded78-a6e8-c768-4069-9abde900b5ea/original/Chicken_(1).png?format=webp",title:"Chicken"},
+    {img:"https://dao54xqhg9jfa.cloudfront.net/OMS-Category/b297aada-cd28-8357-f0e1-2ae25d3dd1ee/original/FishSeafood.png?format=webp",title:"Fish & Seafood"},
+    {img:"https://dao54xqhg9jfa.cloudfront.net/OMS-Category/b4b90104-3976-ee97-7cdd-812a4916c0e6/original/Mutton.jpg?format=webp",title:"Mutton"},
+    {img:"https://dao54xqhg9jfa.cloudfront.net/OMS-Category/1db15fd5-a5d3-b275-1579-2e3b2edc0d30/original/RTC.png?format=webp",title:"Ready to Cook"},
+    {img:"https://dao54xqhg9jfa.cloudfront.net/Category/2105beee-e9a9-3efd-4912-2b9657f32d99/original/1604284739.3526--2020-11-0208_08_59--472.jpeg?format=webp",title:"Prawns"},
+    {img:"https://dao54xqhg9jfa.cloudfront.net/OMS-Category/db686e9b-3609-a719-49a6-435a883a1d59/original/Cold-Cuts_(1).png?format=webp",title:"Cold Cuts"},
+    {img:"https://dao54xqhg9jfa.cloudfront.net/OMS-Category/a73279cf-eb46-a552-c7bd-10361814ae92/original/Spread.png?format=webp",title:"Spreads"},
+    {img:"https://dao54xqhg9jfa.cloudfront.net/Category/bdfca08e-566b-4439-0aac-9c100704cb0b/original/1603646527.5457--2020-10-2522_52_07--738.jpeg?format=webp",title:"Eggs"},
+    {img:"https://dao54xqhg9jfa.cloudfront.net/OMS-Category/ecf1b530-d791-c509-b17c-43ccaabf9921/original/1.jpg?format=webp",title:"Biryani & Kebab"},
+    {img:"https://dao54xqhg9jfa.cloudfront.net/Category/8209cc57-cc85-4e5d-ac6b-4d8f2f36c1ce/original/1604645369.2866--2020-11-0612_19_29--738.jpeg?format=webp",title:"Combos"},
+    {img:"https://dao54xqhg9jfa.cloudfront.net/OMS-Category/050c5580-8e16-30f3-213f-f109d86be44a/original/cat-image_(1).jpg?format=webp",title:"Featured Collections"}
+    ]
+let home6=document.querySelector("#home_6")
+homeappend(home6arr,home6)
+
+
+//#home_8
+let home8arr=[
+    {img:"https://www.licious.in/blog/wp-content/uploads/2022/06/shutterstock_1339636625-1.jpg",title:"Wait a Minute! Don't Buy Shawarma Anymore, Make it at Home Instead!"},
+    {img:"https://www.licious.in/blog/wp-content/uploads/2022/06/shutterstock_2055615416.jpg",title:"This Creamy Herbed Chicken Recipe is the Perfect Meal Any Day of the Week!"},
+    {img:"https://www.licious.in/blog/wp-content/uploads/2022/06/shutterstock_2040426830.jpg",title:"Savour a Mouth-Watering Paprika Roast Chicken On a Lazy Weekend!"}
+    ]
+let home8=document.querySelector("#home_8")
+homeappend(home8arr,home8)
+
+//#home_9
+let home9=document.querySelector("#home_9")
+let banner2=document.createElement("img")
+banner2.src="https://d2407na1z3fc0t.cloudfront.net/homepageStaticBanner/homepageStaticBanner_62a34be7b89a3"
+home9.append(banner2)
+
+//#home_10
+let home10=document.querySelector("#home_10")
+let banner3div=document.createElement("div")
+let banner3img=document.createElement("img")
+banner3img.src="https://d2407na1z3fc0t.cloudfront.net/Banner/Rebranding_homepage_madewithLicious.png"
+let banner3h2=document.createElement("h2")
+banner3h2.innerText="#MadeWithLicious"
+let banner3p=document.createElement("p")
+banner3p.innerText="Cooking with Licious meats is more fun now! Post a picture of your Licious dish on our Instagram page, tag us and use #MadeWithLicious for a chance to be featured on our Instagram page! Happy Cooking!"
+banner3div.append(banner3img,banner3h2,banner3p)
+home10.append(banner3div)
+
+
+
+      

@@ -76,3 +76,256 @@
 }
 
 
+
+/* #home_5 */
+#home_5{
+    width: 100%;
+    margin-top: 20px;
+}
+#home_5>img{
+    width: 100%;
+}
+
+
+/* home_6 headings */
+#home_6_h2{
+    margin-top: 20px;
+    margin-left:12.5%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 22px;
+    color: rgb(74,75,75);
+}
+
+/* #home_6 */
+#home_6{    
+    width: 75%;
+    margin: auto;
+    margin-top: 20px;
+    border: 1px solid transparent;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(3,auto);
+    gap: 18px 25px;
+}
+#home_6>div{
+    border: 1px solid transparent;
+    height: 240px;
+    overflow: hidden;
+}
+#home_6>div>img{
+    width: 100%;
+    height: 86%; 
+    transition-duration: 1s;
+}
+#home_6>div>img:hover{
+    transform: scale(1.07);
+}
+#home_6>div>p{
+    text-align: center;
+    margin-top: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 550;
+    color: rgb(62,76,97);
+}
+
+
+/* #home_8 */
+#home_8{    
+    width: 75%;
+    margin: auto;
+    margin-top: 10px;
+    border: 1px solid transparent;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 10px 10px;
+}
+#home_8>div{
+    border: 1px solid transparent;
+    height: 440px;
+}
+#home_8>div>img{
+    width: 100%;
+    height: 86%; 
+    border-radius: 10px;
+}
+#home_8>div>p{
+    margin-top: 7px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(62,76,97);
+    line-height: 30px;
+    font-size: 16.5px;
+    font-weight: bold;
+}
+
+/* home_8 headings */
+#home_8_h2{
+    margin-top: 20px;
+    margin-left:12.5%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 22px;
+    color: rgb(74,75,75);
+}
+
+/* #home_9 */
+#home_9{
+    width: 75%;
+    margin: auto;
+    margin-top: 25px;
+}
+
+/* #home_10 */
+#home_10{
+    background-color: rgb(242,242,242);
+}
+#home_10>div{
+    width: 48%;
+    margin: auto;
+    text-align: center;
+    margin-top: 35px;
+    
+}
+#home_10>div>img{
+    margin-top: 30px;
+}
+#home_10>div>h2{
+    color: rgb(74,75,75);
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 10px;
+}
+#home_10>div>p{
+    margin-top: 20px;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(74,75,75);
+    line-height: 23px;
+}
+
+
+
+/* first sliding */
+.home_product {
+    width: 84%;
+    margin: auto;
+  /* position: relative; */
+  overflow: hidden;
+  padding: 20px;
+  display: flex;
+}
+
+.home_product-category {
+    color: rgb(74,75,75);
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 20px;
+    margin-left: 12.5%;
+}
+
+
+.home_product-container {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  height: 470px;
+  
+}
+
+.home_product-container::-webkit-scrollbar {
+  display: none;
+}
+
+.home_product-card {
+/* display: flex; */
+  flex: 0 0 auto;
+  width: 365px;
+  height:440px;
+  margin-left: 2px;
+  margin-top: 10px;
+  margin-right: 15px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 10px;
+  background-color: white;
+}
+
+.home_product-image {
+  /* position: relative; */
+  width: 100%;
+  height: 50%;
+}
+
+.home_product-thumb {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+#home_p{
+    font-size: 14px;
+    margin-top: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#home_p:hover{
+    color:rgb(16, 140, 212) ;
+}
+
+
+.pre-btn,
+.nxt-btn {
+  border: none;
+  width: 25px;
+  height: 25px;
+  /* position: absolute; */
+  cursor: pointer;
+  /* z-index: 1; */
+}
+
+.pre-btn {
+    margin-top:250px;
+    margin-right: 40px;
+}
+
+.nxt-btn {
+    margin-top:250px;
+    margin-left: 40px;
+    transform:rotate(180deg);
+}
+
+.pre-btn img,
+.nxt-btn img {
+    width: 20px;
+    height: 30px;
+    background-color: rgb(247,246,246)
+}
+
+.hn{
+    padding: 25px 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(74,75,75);
+    font-weight: bold;
+}
+.hd{
+    padding: 0px 15px;
+    font-size: 13.5px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(115,114,115);
+}
+.hw{
+    padding: 15px 15px;
+    font-size: 13.5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: rgb(74,75,75);
+}
+.hwspan{
+    margin-left: 30px;
+}
+.hp{
+    padding: 10px 15px;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: rgb(209,19,66);
+}
+.hi{
+    width: 100%;
+}
