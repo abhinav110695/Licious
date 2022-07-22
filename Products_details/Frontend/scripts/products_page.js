@@ -8,9 +8,9 @@ let getdata = async () => {
 };
 getdata();
 
-function appenvalue(value) {
+ appenvalue =(value) => {
   let box = document.getElementById("div1_ptodct");
-  value.forEach(function (val) {
+  value.forEach( (val) =>{
     let div = document.createElement("div");
     div.setAttribute("id", "div1_images");
 
@@ -94,14 +94,21 @@ function appenvalue(value) {
     let substruct = document.createElement("button");
     substruct.setAttribute("id", "div_3CartBtn4");
     substruct.innerHTML = "-";
+    // console.log(substruct);
 
     let center = document.createElement("button");
     center.setAttribute("id", "div_3CartBtn5");
     center.innerHTML = "Add to cart";
+    // console.log(center);
 
     let jor = document.createElement("button");
     jor.setAttribute("id", "div_3CartBtn6");
     jor.innerText = "+";
+    // console.log(jor);
+
+    let NewButtondata = document.createElement("button");
+    NewButtondata.setAttribute("id", "div_3CartBtn7");
+    NewButtondata.innerText = "Add to cart";
 
     center.addEventListener("click", () => {
       alert("click");
@@ -122,6 +129,7 @@ function appenvalue(value) {
     });
     jor.addEventListener("click", () => {
       center.innerHTML = +center.innerHTML + +1;
+      // console.log(center.innerHTML)
       if (center.innerHTML == 6) {
         jor.style.display = "none";
       } else if (center.innerHTML == -1 && center.innerHTML == 0) {
@@ -141,11 +149,11 @@ function appenvalue(value) {
     let div9 = document.createElement("div");
 
     let span1 = document.createElement("span");
-    span1.setAttribute("class", "dot");
+    span1.setAttribute("class", "SlideShowdot");
     let span2 = document.createElement("span");
-    span2.setAttribute("class", "dot");
+    span2.setAttribute("class", "SlideShowdot");
     let span3 = document.createElement("span");
-    span3.setAttribute("class", "dot");
+    span3.setAttribute("class", "SlideShowdot");
 
     div7.append(bikelogo, bikeContnt);
 
@@ -161,8 +169,8 @@ function appenvalue(value) {
     // div.append(div8, div9);
     // div.append(image,image2,image3);
     div2.append(name, desc2, desc, div3, div6, div7);
-
     box.append(div, div2);
+    document.getElementById("newbuttonsjdn").append(NewButtondata);
   });
 
   let slideIndex = 0;
@@ -171,7 +179,7 @@ function appenvalue(value) {
   function showSlides() {
     let i;
     let slides = document.getElementsByClassName();
-    let dots = document.getElementsByClassName("dot");
+    let dots = document.getElementsByClassName("SlideShowdot");
     for (i = 0; i < slides.length; i++) {
       slides[i].style.display = "none";
     }
@@ -190,7 +198,7 @@ function appenvalue(value) {
 
 //---------------------------------------------------------------------------------------------------------------
 
-async function getSlideData() {
+let getSlideData = async ()=> {
   try {
     let response = await fetch("http://localhost:3000/api/bestSeller");
     let users = await response.json();
@@ -202,7 +210,8 @@ async function getSlideData() {
 }
 getSlideData();
 
-function appendSlideNews(dated) {
+ appendSlideNews = (dated)  =>{
+  let sum =0;
   dated.forEach((e) => {
     let card2 = document.createElement("div");
     let div = document.createElement("div");
@@ -251,87 +260,98 @@ function appendSlideNews(dated) {
     // cuurency.innerText = e.currency;
 
     let price = document.createElement("h5");
-    price.innerText = "₹ : " + e.price;
+    price.innerText = e.price;
+    // console.log(price)
+    // sum += e.price;
 
     let strikePrice = document.createElement("strike");
     strikePrice.innerText = "₹" + e.strikedPrice;
 
-    let minus = document.createElement("button");
-    minus.setAttribute("id", "div_3CartBtn1");
-    minus.innerHTML = "-";
+    // let minus = document.createElement("button");
+    // minus.setAttribute("id", "div_3CartBtn1");
+    // minus.innerHTML = "-";
 
     let main = document.createElement("button");
     main.setAttribute("id", "div_3CartBtn2");
     main.innerHTML = "Add to cart";
+    main.addEventListener("click", function(){
+      alert("cliked")
+      console.log(price)
+      // localStorage.setItem("prices", JSON.stringify(price))
+    })
 
-    let add = document.createElement("button");
-    add.setAttribute("id", "div_3CartBtn3");
-    add.innerText = "+";
+    // let add = document.createElement("button");
+    // add.setAttribute("id", "div_3CartBtn3");
+    // add.innerText = "+";
 
-    main.addEventListener("click", () => {
-      alert("click");
-      if (main.innerHTML == "Add to cart") {
-        main.innerHTML = 0;
-        add.style.display = "inline-block";
-        minus.style.display = "inline-block";
-      }
-    });
-    minus.addEventListener("click", () => {
-      main.innerHTML = main.innerHTML - 1;
-      if (main.innerHTML < 1) {
-        minus.style.display = "none";
-        main.innerHTML == "Add to cart";
-      }
-      if (main.innerHTML == -1 && main.innerHTML == 0) {
-        add.style.display = "inline-block";
-        main.innerHTML == "Add to cart";
-      }
-    });
-    add.addEventListener("click", () => {
-      main.innerHTML = +main.innerHTML + +1;
-      if (main.innerHTML == 6) {
-        add.style.display = "none";
-      } else if (main.innerHTML == -1 && main.innerHTML == 0) {
-        main.innerHTML == "Add to cart";
-      }
-    });
+    // main.addEventListener("click", () => {
+    //   alert("click");
+    //   if (main.innerHTML == "Add to cart") {
+    //     main.innerHTML = 0;
+    //     add.style.display = "inline-block";
+    //     minus.style.display = "inline-block";
+    //   }
+    // });
+    // minus.addEventListener("click", () => {
+    //   main.innerHTML = main.innerHTML - 1;
+    //   if (main.innerHTML < 1) {
+    //     minus.style.display = "none";
+    //     main.innerHTML == "Add to cart";
+    //   }
+    //   if (main.innerHTML == -1 && main.innerHTML == 0) {
+    //     add.style.display = "inline-block";
+    //     main.innerHTML == "Add to cart";
+    //   }
+    // });
+    // add.addEventListener("click", () => {
+    //   main.innerHTML = +main.innerHTML + +1;
+    //   if (main.innerHTML == 6) {
+    //     add.style.display = "none";
+    //   } else if (main.innerHTML == -1 && main.innerHTML == 0) {
+    //     main.innerHTML == "Add to cart";
+    //   }
+    // });
 
-    let CartButton = document.createElement("div");
-    CartButton.setAttribute("id", "stylingBtn");
-    CartButton.append(minus, main, add);
+    // let CartButton = document.createElement("div");
+    // CartButton.setAttribute("id", "stylingBtn");
+    // CartButton.append(minus, main, add);
 
-    let bikelogo = document.createElement("img");
-    bikelogo.setAttribute("src", e.netwetlogo);
+    // let bikelogo = document.createElement("img");
+    // bikelogo.setAttribute("src", e.netwetlogo);
+
+    // ---------------------------------------------------------
 
     // div4.append(bikelogo);
     // console.log(div4);
 
     div2.append(net_tag, net, n_gm, gross_tag, gross, g_gm);
-    div3.append(price_tag, cuurency, price, strikePrice, CartButton);
+    div3.append(price_tag, cuurency, price, strikePrice);
 
-    div.append(img, name, des, div2, div3);
+    div.append(img, name, des, div2, div3,main);
 
     card2.append(div);
     document.getElementById("slideNews").append(card2);
   });
+
+  console.log(sum)
 }
 
 //<!-----------------------------Slide bar in home page----------------------------------------->
 
 let button = document.getElementById("next_home");
 
-button.onclick = function () {
+button.onclick =  ()  =>{
   let container = document.getElementById("slideNews");
   sideScroll(container, "right", 25, 100, 10);
 };
 
 let back = document.getElementById("prev_home");
-back.onclick = function () {
+back.onclick =  () => {
   let container = document.getElementById("slideNews");
   sideScroll(container, "left", 25, 100, 10);
 };
 
-function sideScroll(element, direction, speed, distance, step) {
+ sideScroll = (element, direction, speed, distance, step) =>{
   scrollAmount = 0;
   let slideTimer = setInterval(function () {
     if (direction == "left") {
@@ -393,7 +413,7 @@ let socailmediadata = async () => {
 };
 socailmediadata();
 
-function scoailmedaiDataappend(data) {
+ scoailmedaiDataappend = (data) => {
   let box = document.getElementById("slideNews1");
   data.forEach((e) => {
     let div = document.createElement("div");
@@ -449,8 +469,8 @@ showSlides();
 
 function showSlides() {
   let i;
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("dot");
+  let slides = document.getElementsByClassName("mySlidespages");
+  let dots = document.getElementsByClassName("SlideShowdot");
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
   }
@@ -465,3 +485,8 @@ function showSlides() {
   dots[slideIndex - 1].className += " active";
   setTimeout(showSlides, 2000); // Change image every 2 seconds
 }
+
+
+// <!---------------------------------FLOATING---------------------------------------------------------------------!>
+
+

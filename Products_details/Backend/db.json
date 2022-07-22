@@ -1325,7 +1325,7 @@
       "unit": "gms",
       " price_tag": "MRP:",
       "cuurency": "₹",
-      "price": "100",
+      "price": 100,
       "strikePrice": "",
       "off": "",
       "off_tag": "%OFF"
@@ -1342,7 +1342,7 @@
       "unit": "gms",
       " price_tag": "MRP:",
       "cuurency": "₹",
-      "price": "149",
+      "price": 149,
       "strikePrice": "",
       "off": "",
       "off_tag": "%OFF"
@@ -1359,7 +1359,7 @@
       "unit": "gms",
       " price_tag": "MRP:",
       "cuurency": "₹",
-      "price": "29",
+      "price": 29,
       "strikePrice": "",
       "off": "",
       "off_tag": "%OFF"
@@ -1376,7 +1376,7 @@
       "unit": "gms",
       " price_tag": "MRP:",
       "cuurency": "₹",
-      "price": "31",
+      "price": 31,
       "strikePrice": "",
       "off": "",
       "off_tag": "%OFF"
