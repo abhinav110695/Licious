@@ -3,14 +3,18 @@ let getdata = async () => {
   let data = await res.json();
   //   console.log(data);
   appenvalue(data);
+  // floatCartData(data);
   localStorage.setItem("tempo", JSON.stringify(data));
   // getdatsasa(data);
 };
 getdata();
 
- appenvalue =(value) => {
+let CartAllDetials = JSON.parse(localStorage.getItem("CartDetails")) || [];
+
+appenvalue = (value) => {
+  let sum2 = 0;
   let box = document.getElementById("div1_ptodct");
-  value.forEach( (val) =>{
+  value.forEach((val) => {
     let div = document.createElement("div");
     div.setAttribute("id", "div1_images");
 
@@ -23,8 +27,6 @@ getdata();
     image2.src = val.imgUrl1;
     let image3 = document.createElement("img");
     image3.src = val.imgUrl2;
-    // let image4 = document.createElement("img");
-    // image4.src = val.imgUrl3;
 
     let name = document.createElement("h3");
     name.innerHTML = val.name;
@@ -87,6 +89,7 @@ getdata();
     let price = document.createElement("h3");
     price.innerHTML = " ₹ " + val.price;
     price.setAttribute("id", "div1_weigthlastprice");
+    console.log(val.price);
 
     let CartButton2 = document.createElement("div");
     CartButton2.setAttribute("id", "stylingBtn1");
@@ -99,27 +102,32 @@ getdata();
     let center = document.createElement("button");
     center.setAttribute("id", "div_3CartBtn5");
     center.innerHTML = "Add to cart";
-    // console.log(center);
+    // console.log(center.innerHTML);
 
     let jor = document.createElement("button");
     jor.setAttribute("id", "div_3CartBtn6");
     jor.innerText = "+";
-    // console.log(jor);
-
-    let NewButtondata = document.createElement("button");
-    NewButtondata.setAttribute("id", "div_3CartBtn7");
-    NewButtondata.innerText = "Add to cart";
 
     center.addEventListener("click", () => {
       alert("click");
       if (center.innerHTML == "Add to cart") {
         center.innerHTML = 0;
+        CartAllDetials.push(val);
+        localStorage.setItem("CartDetails", JSON.stringify(CartAllDetials));
         jor.style.display = "inline-block";
         substruct.style.display = "inline-block";
+        // console.log(margeprice)
       }
     });
     substruct.addEventListener("click", () => {
-      center.innerHTML = center.innerHTML - 1;
+      let substaract = (center.innerHTML = center.innerHTML - 1);
+      // console.log(center.innerHTML)
+      sum2 = val.price;
+      totalPrice = substaract * sum2;
+      // console.log(sum2)
+      console.log(totalPrice);
+      document.getElementById("totalpriceShow").innerHTML = null;
+      document.getElementById("totalpriceShow").append(totalPrice);
       if (center.innerHTML < 1) {
         substruct.style.display = "none";
       } else if (center.innerHTML == -1 && center.innerHTML == 0) {
@@ -128,8 +136,13 @@ getdata();
       }
     });
     jor.addEventListener("click", () => {
-      center.innerHTML = +center.innerHTML + +1;
-      // console.log(center.innerHTML)
+      let number = (center.innerHTML = +center.innerHTML + +1);
+      sum2 = val.price;
+      totalPrice = number * sum2;
+      // console.log(sum2)
+      console.log(totalPrice);
+      document.getElementById("totalpriceShow").innerHTML = null;
+      document.getElementById("totalpriceShow").append(totalPrice);
       if (center.innerHTML == 6) {
         jor.style.display = "none";
       } else if (center.innerHTML == -1 && center.innerHTML == 0) {
@@ -163,42 +176,28 @@ getdata();
 
     div3.append(div4, div5);
 
-    let images = div8.append(image, image2, image3);
+    div8.append(image, image2, image3);
 
     div9.append(span1, span2, span3);
-    // div.append(div8, div9);
-    // div.append(image,image2,image3);
     div2.append(name, desc2, desc, div3, div6, div7);
     box.append(div, div2);
-    document.getElementById("newbuttonsjdn").append(NewButtondata);
   });
 
-  let slideIndex = 0;
   showSlides();
 
   function showSlides() {
     let i;
-    let slides = document.getElementsByClassName();
     let dots = document.getElementsByClassName("SlideShowdot");
-    for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-    }
-    slideIndex++;
-    if (slideIndex > slides.length) {
-      slideIndex = 1;
-    }
     for (i = 0; i < dots.length; i++) {
       dots[i].className = dots[i].className.replace(" active", "");
     }
-    slides[slideIndex - 1].style.display = "block";
-    dots[slideIndex - 1].className += " active";
     setTimeout(showSlides, 2000); // Change image every 2 seconds
   }
-}
+};
 
 //---------------------------------------------------------------------------------------------------------------
 
-let getSlideData = async ()=> {
+let getSlideData = async () => {
   try {
     let response = await fetch("http://localhost:3000/api/bestSeller");
     let users = await response.json();
@@ -207,11 +206,13 @@ let getSlideData = async ()=> {
   } catch (err) {
     console.log(err);
   }
-}
+};
 getSlideData();
 
- appendSlideNews = (dated)  =>{
-  let sum =0;
+let totalsum;
+
+appendSlideNews = (dated) => {
+  let sum = 0;
   dated.forEach((e) => {
     let card2 = document.createElement("div");
     let div = document.createElement("div");
@@ -231,6 +232,7 @@ getSlideData();
     div2.setAttribute("id", "div_3wight");
 
     let div4 = document.createElement("div");
+    div4.setAttribute("id", "bikelogosantosh");
 
     let net_tag = document.createElement("h6");
     net_tag.innerText = e.net_tag;
@@ -257,101 +259,109 @@ getSlideData();
     price_tag.innerText = e.price_tag;
 
     let cuurency = document.createElement("h5");
-    // cuurency.innerText = e.currency;
 
     let price = document.createElement("h5");
     price.innerText = e.price;
-    // console.log(price)
-    // sum += e.price;
 
     let strikePrice = document.createElement("strike");
     strikePrice.innerText = "₹" + e.strikedPrice;
 
-    // let minus = document.createElement("button");
-    // minus.setAttribute("id", "div_3CartBtn1");
-    // minus.innerHTML = "-";
+    let minus = document.createElement("button");
+    minus.setAttribute("id", "div_3CartBtn1");
+    minus.innerHTML = "-";
 
     let main = document.createElement("button");
     main.setAttribute("id", "div_3CartBtn2");
     main.innerHTML = "Add to cart";
-    main.addEventListener("click", function(){
-      alert("cliked")
-      console.log(price)
-      // localStorage.setItem("prices", JSON.stringify(price))
-    })
 
-    // let add = document.createElement("button");
-    // add.setAttribute("id", "div_3CartBtn3");
-    // add.innerText = "+";
+    let add = document.createElement("button");
+    add.setAttribute("id", "div_3CartBtn3");
+    add.innerText = "+";
 
-    // main.addEventListener("click", () => {
-    //   alert("click");
-    //   if (main.innerHTML == "Add to cart") {
-    //     main.innerHTML = 0;
-    //     add.style.display = "inline-block";
-    //     minus.style.display = "inline-block";
-    //   }
-    // });
-    // minus.addEventListener("click", () => {
-    //   main.innerHTML = main.innerHTML - 1;
-    //   if (main.innerHTML < 1) {
-    //     minus.style.display = "none";
-    //     main.innerHTML == "Add to cart";
-    //   }
-    //   if (main.innerHTML == -1 && main.innerHTML == 0) {
-    //     add.style.display = "inline-block";
-    //     main.innerHTML == "Add to cart";
-    //   }
-    // });
-    // add.addEventListener("click", () => {
-    //   main.innerHTML = +main.innerHTML + +1;
-    //   if (main.innerHTML == 6) {
-    //     add.style.display = "none";
-    //   } else if (main.innerHTML == -1 && main.innerHTML == 0) {
-    //     main.innerHTML == "Add to cart";
-    //   }
-    // });
+    let newbutton = document.createElement("button");
+    newbutton.innerHTML = "fhg";
 
-    // let CartButton = document.createElement("div");
-    // CartButton.setAttribute("id", "stylingBtn");
-    // CartButton.append(minus, main, add);
+    main.addEventListener("click", () => {
+      alert("click");
+      if (main.innerHTML == "Add to cart") {
+        main.innerHTML = 0;
+        CartAllDetials.push(e);
+        localStorage.setItem("CartDetails", JSON.stringify(CartAllDetials));
+        add.style.display = "inline-block";
+        minus.style.display = "inline-block";
+      }
+    });
+    minus.addEventListener("click", () => {
+      let substaract = (main.innerHTML = main.innerHTML - 1);
+      sum = e.price;
+      totalPrice = substaract * sum;
+      // console.log(sum2)
+      console.log(totalPrice);
+      document.getElementById("totalpriceShow").innerHTML = null;
+      document.getElementById("totalpriceShow").append(totalPrice);
+      if (main.innerHTML < 1) {
+        minus.style.display = "none";
+        main.innerHTML == "Add to cart";
+      }
+      if (main.innerHTML == -1 && main.innerHTML == 0) {
+        add.style.display = "inline-block";
+        main.innerHTML == "Add to cart";
+      }
+    });
+    add.addEventListener("click", () => {
+      let number = (main.innerHTML = +main.innerHTML + +1);
+      sum = e.price;
+      totalPrice = number * sum;
+      // console.log(sum2)
+      console.log(totalPrice);
+      document.getElementById("totalpriceShow").innerHTML = null;
+      document.getElementById("totalpriceShow").append(totalPrice);
+      if (main.innerHTML == 6) {
+        add.style.display = "none";
+      } else if (main.innerHTML == -1 && main.innerHTML == 0) {
+        main.innerHTML == "Add to cart";
+      }
+    });
 
-    // let bikelogo = document.createElement("img");
-    // bikelogo.setAttribute("src", e.netwetlogo);
+    let CartButton = document.createElement("div");
+    CartButton.setAttribute("id", "stylingBtn");
+    CartButton.append(minus, main, add);
 
-    // ---------------------------------------------------------
+    let bikelogosantosh = document.createElement("img");
+    bikelogosantosh.src =
+      "https://www.licious.in/img/rebranding/express_delivery.svg";
 
-    // div4.append(bikelogo);
-    // console.log(div4);
+    let bikelogoTimingsantosh = document.createElement("p");
+    bikelogoTimingsantosh.innerText = "Tommorow 8AM - 11AM";
+
+    div4.append(bikelogosantosh, bikelogoTimingsantosh);
 
     div2.append(net_tag, net, n_gm, gross_tag, gross, g_gm);
     div3.append(price_tag, cuurency, price, strikePrice);
 
-    div.append(img, name, des, div2, div3,main);
+    div.append(img, name, des, div2, div3, CartButton, div4);
 
     card2.append(div);
     document.getElementById("slideNews").append(card2);
   });
-
-  console.log(sum)
-}
+};
 
 //<!-----------------------------Slide bar in home page----------------------------------------->
 
 let button = document.getElementById("next_home");
 
-button.onclick =  ()  =>{
+button.onclick = () => {
   let container = document.getElementById("slideNews");
   sideScroll(container, "right", 25, 100, 10);
 };
 
 let back = document.getElementById("prev_home");
-back.onclick =  () => {
+back.onclick = () => {
   let container = document.getElementById("slideNews");
   sideScroll(container, "left", 25, 100, 10);
 };
 
- sideScroll = (element, direction, speed, distance, step) =>{
+sideScroll = (element, direction, speed, distance, step) => {
   scrollAmount = 0;
   let slideTimer = setInterval(function () {
     if (direction == "left") {
@@ -364,7 +374,7 @@ back.onclick =  () => {
       window.clearInterval(slideTimer);
     }
   }, speed);
-}
+};
 
 // <!-------------------------------------------------------------------------------------------------------------------------------------->
 
@@ -413,7 +423,7 @@ let socailmediadata = async () => {
 };
 socailmediadata();
 
- scoailmedaiDataappend = (data) => {
+scoailmedaiDataappend = (data) => {
   let box = document.getElementById("slideNews1");
   data.forEach((e) => {
     let div = document.createElement("div");
@@ -460,7 +470,7 @@ socailmediadata();
     div.append(img, div2, div3, div4);
     box.append(div);
   });
-}
+};
 
 // <!------------------------------------------SLIDE---SHOW-------------------------------------------------------------------------------------!>
 
@@ -483,10 +493,79 @@ function showSlides() {
   }
   slides[slideIndex - 1].style.display = "block";
   dots[slideIndex - 1].className += " active";
-  setTimeout(showSlides, 2000); // Change image every 2 seconds
+  setTimeout(showSlides, 3000); // Change image every 2 seconds
 }
 
+// <!---------------------------DATA APPEND FOR CART PAGE---------------------------------------------------------------------------!>
 
-// <!---------------------------------FLOATING---------------------------------------------------------------------!>
+let CartDetials = JSON.parse(localStorage.getItem("CartDetails"));
+console.log(CartDetials);
 
+let stickeyImageCart = document.createElement("img");
+stickeyImageCart.src = CartDetials[0].imgUrl;
 
+let stickeyPriceCart = document.createElement("p");
+stickeyPriceCart.innerHTML = CartDetials[0].name;
+
+let stickeyMrpCart = document.createElement("p");
+stickeyMrpCart.innerHTML = "MRP:";
+let stickeyNmaecart = document.createElement("h1");
+stickeyNmaecart.innerHTML = "₹" + CartDetials[0].price;
+
+let stickeybuttonCart = document.createElement("button");
+stickeybuttonCart.innerHTML = "Go To Cart";
+
+stickeybuttonCart.addEventListener("click", () => {
+  // alert("click");
+});
+
+let stickeybikeLogo = document.createElement("img");
+stickeybikeLogo.src = CartDetials[0].bikelogo;
+
+let stickeybikecont = document.createElement("p");
+stickeybikecont.innerHTML = CartDetials[0].bikeContnt;
+
+let stickeydiv1 = document.createElement("div");
+stickeydiv1.setAttribute("id", "stickeyCar1");
+let sticketydiv2 = document.createElement("div");
+sticketydiv2.setAttribute("id", "stickeyCart2");
+
+stickeydiv1.append(
+  stickeyImageCart,
+  stickeyPriceCart,
+  stickeyMrpCart,
+  stickeyNmaecart,
+  stickeybuttonCart
+);
+
+sticketydiv2.append(stickeybikeLogo, stickeybikecont);
+
+document.getElementById("FloatCart_page").append(stickeydiv1, sticketydiv2);
+
+// ----------------------------------D-A-T-A--A--P-P-E-N-D-F-O-R-A-D-D-T-O-C-A-R-T---------------------------------------------------------------
+
+CartDetials.forEach((ele) => {
+  let image = document.createElement("img");
+  image.src = ele.imgUrl;
+
+  let name = document.createElement("p");
+  name.innerHTML = ele.name;
+
+  let price = document.createElement("p");
+  price.innerHTML = ele.price;
+
+  let addTocart = document.createElement("button");
+  addTocart.innerHTML = "Add to Cart";
+
+  let div1 = document.createElement("div");
+  div1.setAttribute("id", "");
+
+  let div2 = document.createElement("div");
+  div2.setAttribute("id", "");
+
+  div1.append(image, name);
+
+  div2.append(addTocart);
+
+  // document.getElementById("FloatCart_page").append(div1,div2)
+});
