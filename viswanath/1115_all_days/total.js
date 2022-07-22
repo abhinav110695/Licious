@@ -195,8 +195,11 @@ function vishwa_append(value)
 //      let vishwa_database=JOSN.parse(localStorage.getItem("vishwa_local_storage")) || [];
 // }
 
-// let getData()=async()=>{
+let getData=async()=>{
+     let res=await fetch("http://localhost:3000/api/Chicken_data");
+     let data=await res.json();
+     console.log(data)
+}
 
-// }
 
-     
+     getData()
