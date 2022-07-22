@@ -66,6 +66,7 @@ vishwa_getdata();
 
 function vishwa_append(value)
 {
+     var count=0;
     let vishwa_products_grid=document.querySelector("#vishwa_products_grid");
     vishwa_products_grid.innerHTML=null;
     value.forEach(function (ele){
@@ -130,39 +131,45 @@ function vishwa_append(value)
         let vishwa_addtocartbtn=document.createElement("button");
         vishwa_addtocartbtn.innerText="ADD TO CART"; 
         vishwa_addtocartbtn.setAttribute("id","vishwa_addtocartbtn")
-        var count=0;
+       
         
         vishwa_addtocartbtn.addEventListener("click",()=>{
-          // data.forEach(function(){
 
-               if(vishwa_addtocartbtn.innerHTML=="ADD TO CART")
-               {
-                   count++;
-                   vishwa_addtocartbtn.innerText="added" + "  " + count; 
-               }
-             });  
+          count +=ele.price;
+          console.log(count)
+        })
+
+
+     //      // data.forEach(function(){
+
+     //           if(vishwa_addtocartbtn.innerHTML=="ADD TO CART")
+     //           {
+     //               count++;
+     //               vishwa_addtocartbtn.innerText="added" + "  " + count; 
+     //           }
+     //         });  
      
-             let v_plus =document.createElement("button");
-             v_plus.innerText="+";
-             v_plus.setAttribute("id","v_plus");
-             v_plus.addEventListener("click",()=>{
-               count++;
-               document.querySelector("#vishwa_addtocartbtn").innerText="added" + "  " + count; 
-           })
+     //         let v_plus =document.createElement("button");
+     //         v_plus.innerText="+";
+     //         v_plus.setAttribute("id","v_plus");
+     //         v_plus.addEventListener("click",()=>{
+     //           count++;
+     //           document.querySelector("#vishwa_addtocartbtn").innerText="added" + "  " + count; 
+          //  })
          
-             let v_minus =document.createElement("button");
-             v_minus.innerText="-";
-             v_minus.setAttribute("id","v_minus");
-             v_minus.addEventListener("click",()=>{
-               count--;
-               document.querySelector("#vishwa_addtocartbtn").innerText="added" + "  " + count; 
-               if(count<=0)
-               {
-                    count=0;
-                    document.querySelector("#vishwa_addtocartbtn").innerText="Add to cart"; 
-               }
+     //         let v_minus =document.createElement("button");
+     //         v_minus.innerText="-";
+     //         v_minus.setAttribute("id","v_minus");
+     //         v_minus.addEventListener("click",()=>{
+     //           count--;
+     //           document.querySelector("#vishwa_addtocartbtn").innerText="added" + "  " + count; 
+     //           if(count<=0)
+     //           {
+     //                count=0;
+     //                document.querySelector("#vishwa_addtocartbtn").innerText="Add to cart"; 
+     //           }
      
-           })
+     //       })
          
           // })
           
