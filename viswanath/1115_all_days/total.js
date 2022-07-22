@@ -54,10 +54,10 @@ else if(document.title=="Featured_Collection_Page")
 
 
 
-
+let data;
 let vishwa_getdata=async()=>{
     let response = await fetch(vishwa_url_abc);
-    let data=await response.json();
+     data=await response.json();
 
 //     console.log(data)
    vishwa_append(data)
@@ -198,8 +198,47 @@ function vishwa_append(value)
 let getData=async()=>{
      let res=await fetch("http://localhost:3000/api/Chicken_data");
      let data=await res.json();
-     console.log(data)
+     console.log(data[0].price)
 }
 
 
      getData()
+
+     function vishwa_sort__by_price_button(){
+          
+          data=data.sort(function (a, b) {
+               a=+a; b=+b;
+                         return b.price - a.price;
+                       });
+
+                    //    console.log(data);
+// alert("hello");
+console.log(data[0].price)
+     }
+
+
+
+
+//     <select id="sortSalary" onChange="handleSalarySort()">
+//     //       <option>Sort By Salary</option>
+//     //       <option value="HTL">High to Low</option>
+//     //       <option value="LTH">Low to High</option>
+//     //     </select>
+//     function handleSalarySort() {
+//       var selected = document.querySelector("#sortSalary").value;
+//       //console.log(selected);
+//       if (selected == "HTL") {
+//         jobArr.sort(function (a, b) {
+//           return b.personSalary - a.personSalary;
+//         });
+//         // console.log(jobArr);
+//         displayData(jobArr);
+//       }
+//       if (selected == "LTH") {
+//         jobArr.sort(function (a, b) {
+//           return a.personSalary - b.personSalary;
+//         });
+//         // console.log(jobArr);
+//         displayData(jobArr);
+//       }
+//     }
