@@ -59,7 +59,7 @@ let vishwa_getdata=async()=>{
     let response = await fetch(vishwa_url_abc);
     let data=await response.json();
 
-    console.log(data)
+//     console.log(data)
    vishwa_append(data)
 }
 vishwa_getdata();
@@ -89,10 +89,6 @@ function vishwa_append(value)
         net_wt.setAttribute("class","vishwa_net_wt")
         net_wt.innerText=ele.net_tag +":" + " "+ ele.net +"   "+
          ele.unit;
-        console.log(ele.net)
-      
-        // let net_value=document.createElement("p");
-        // net_value.innerText=ele.net;
         
         let gross_tag=document.createElement("p");
         gross_tag.innerText=ele.gross_tag +"   " +
@@ -102,9 +98,7 @@ function vishwa_append(value)
         quantity.setAttribute("class","vishwa_quantity")
         quantity.append(net_wt,gross_tag)
 
-        // let rate_nums=document.createElement("div")
-        // rate_nums.setAttribute("class","rate_nums")
-
+      
         let price=document.createElement("p");
         price.innerText="MRP "+"₹ : " + ele.price;
         price.setAttribute("class","vishwa_price")
@@ -121,7 +115,6 @@ function vishwa_append(value)
         timimg_text=document.createElement("p");
         timimg_text.innerText="Today in 90 min"
         timimg_text.setAttribute("class","timimg_text")
-    //   >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  // 
         
 
          let div_3_wala=document.createElement("div");
@@ -135,8 +128,9 @@ function vishwa_append(value)
         
         vishwa_addtocartbtn.addEventListener("click",()=>{
 
-          count +=ele.price;
-          console.log(count)
+      
+          count=count+ +(ele.price);
+         
         })
 
 
@@ -175,7 +169,7 @@ function vishwa_append(value)
           
 
         
-     div_3_wala.append(v_minus,vishwa_addtocartbtn,v_plus)
+     div_3_wala.append(vishwa_addtocartbtn)
 
         vishwa_mrp_div.append(price,div_3_wala);
 
@@ -188,34 +182,21 @@ function vishwa_append(value)
 
 }
 
-// //////////////////////////////////////////
 
 
 
 
+// let vishwa_sort__by_price_button=document.querySelector("#vishwa_sort__by_price_button");
+// vishwa_sort__by_price_button.addEventListener("click",function(){
+//      fun_vishwa_sort__by_price_button();
+// })
+// function fun_vishwa_sort__by_price_button(){
+//      vishwa_sort__by_price_button.style.backgroundColor="yellow";
+//      let vishwa_database=JOSN.parse(localStorage.getItem("vishwa_local_storage")) || [];
+// }
 
-let vishwa_sort__by_price_button=document.querySelector("#vishwa_sort__by_price_button");
-vishwa_sort__by_price_button.addEventListener("click",function(){
-     fun_vishwa_sort__by_price_button();
-})
-function fun_vishwa_sort__by_price_button(){
-     vishwa_sort__by_price_button.style.backgroundColor="yellow";
-     let vishwa_database=JOSN.parse(localStorage.getItem("vishwa_local_storage")) || [];
-    
+// let getData()=async()=>{
 
-}
+// }
 
-// "imgUrl": "https://d2407na1z3fc0t.cloudfront.net/prodDev/pr_av4kgtb3l1h/2/prod_display_image/1631077710.8126--2021-09-0810:38:30--1818",
-// "name": "Chicken Curry Cut (Small Pcs) - Large Pack",
-// "des": "Bone-in chunky pieces of skinless meat including Two le...",
-// "net_tag": "Net wt:",
-// "net": 1000,
-// "gross_tag": "Gross:",
-// "gross": 1026,
-// "unit": "gms",
-// "price_tag": "MRP:",
-// "cuurency": "₹",
-// "price": 271,
-// "strikedPrice": "350",
-// "off": "",
-// "off_tag": "%OFF"
+     
