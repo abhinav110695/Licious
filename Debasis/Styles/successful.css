@@ -1,0 +1,15 @@
+#main{
+    width:50%;
+    height:90px;
+    
+    margin:auto;
+    background-image: linear-gradient(to right, rgb(13, 43, 109) , rgb(157, 156, 209));
+    font-size: 40px;
+    color:white;
+    text-align: center;
+    padding:40px;
+}
+marquee{
+     
+    height:10%;
+}
