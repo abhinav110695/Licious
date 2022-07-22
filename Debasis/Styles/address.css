@@ -1,4 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;1,300&display=swap");
+
+
+#div1{
+  
+  height:auto;
+  width:95%;
+  margin:auto;
+}
+#logoimg{
+  height:100px;
+  width:300px;
+}
+
 .bag {
   
   width: 100%;

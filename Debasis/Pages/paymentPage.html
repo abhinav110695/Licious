@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Page</title>
+    <link rel="stylesheet" href="../Styles/paymentPage.css">
+</head>
+<body>
+<body>
+    <div id="paymentinfo">
+        <div id="pymnt1">Payment Information</div>
+        <div id="pymntmain">
+            <div id="pymntmeths">
+            <div>Credit Card ></div>
+            <div>Debit Cards</div>
+            <div>Net Banking</div>
+            <div>Paytm </div>
+            <div>Wallet</div>
+            <div>UPI</div>
+            <div>EMI Options</div>
+            <div>Pay Later</div>  
+            </div>
+            <div id="carddetails">
+                <div id="cardcontainer">
+                    <div id="front">
+                          
+                        <div id="flexbox">
+                            <div id="box">
+                                <span></span>
+                                <div id="cardholder"></div>
+                                <div id="box">
+                                    <div id="expiration">
+                                         
+                                         
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                     
+                </div>
+                <form>
+                    <div id="inputbox">
+                        <span>Card Number</span>
+                        <input id="cardnumberinput" type="text" maxlength="16" placeholder="Enter your card number">
+
+                    </div>
+                    <div id="inputbox">
+                        <span>Card Holder Name</span>
+                        <input id="cardholder" type="text" maxlength="16" placeholder="Enter Name">
+                        
+                    </div>
+                    <div id="flexbox">
+                    <div id="inputbox">
+                        <span>Expiry date</span>
+                         <select name="" id="" class="month-input">
+                             <option value="month" selected disabled>month</option>
+                             <option value="01">01</option>
+                             <option value="02">02</option>
+                             <option value="03">03</option>
+                             <option value="04">04</option>
+                             <option value="05">05</option>
+                             <option value="06">06</option>
+                             <option value="07">07</option>
+                             <option value="08">08</option>
+                             <option value="09">09</option>
+                             <option value="10">10</option>
+                             <option value="11">11</option>
+                             <option value="12">12</option>
+                         </select>
+                        
+                    </div>
+               
+
+                <div id="inputbox">
+                    <span>Expiry year</span>
+                     <select name="" id="" class="year-input">
+                         <option value="year" selected disabled>year</option>
+                         <option value="2022">2022</option>
+                         <option value="2023">2023</option>
+                         <option value="2024">2024</option>
+                         <option value="2025">2025</option>
+                         <option value="2026">2026</option>
+                         <option value="2027">2027</option>
+                         <option value="2028">2028</option>
+                         <option value="2029">2029</option>
+                         <option value="2030">2030</option>
+                          
+                     </select>
+                    
+                </div>
+                <div id="inputbox">
+                    <span>CVV</span>
+                    <input type="text" maxlength="4" class="cvv-input">
+
+                </div>
+
+            </div>
+            <p>I agree with the Privacy Policy by proceeding with this<br>payment.<br>
+                <h3 id="h2text"></h3>(Pay Amount)</p>
+            <input type="submit" value="Make Payment" id="submitbtn1" onclick="myFunction()">
+            <input type="submit" value="Cancel" id="submitbtn2" onclick="myFunction2()">
+                </form>
+            </div>
+    </div>
+    </div>
+
+
+
+
+
+
+
+</div>
+<div id="logos">
+    <div id="logo1">
+        <img id="img1" src="https://secure.ccavenue.com/images/CCAV.png"/>
+    </div>
+    <div id="logo2">
+        <img id="img2" src="https://cdn.worldvectorlogo.com/logos/norton-antivirus-logo.svg"/>                 
+    </div>
+    <div id="logo3">
+        <img id="img3" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkaFogiblQ6NMRqUorb8fCmUZkCOXHvr5scw&usqp=CAU"/>
+    </div>
+</div>
+</div>
+
+
+
+
+<script>
+   var cartamount = JSON.parse(localStorage.getItem("sachindata"));
+   document.querySelector("#totalamount1").innerHTML += cartamount;
+   document.querySelector("#totalamount2").innerHTML += cartamount;
+   
+    
+   function myFunction(){
+       event.preventDefault();
+       window.location.href="paymentsuccess.html";
+   };
+   function myFunction2(){
+       event.preventDefault();
+       window.location.href="paymentfailed.html";
+   };
+
+  
+   function myFunction3(){
+        
+       document.getElementById("billnm").value="Abhinav";
+       document.getElementById("addnm").value="87/4 delhi champa gali, saket";
+       document.getElementById("bill3").value="438955";
+       document.getElementById("bill4").value="Saket";
+       document.getElementById("bill5").value="Delhi";
+       document.getElementById("bill6").value="India";
+       document.getElementById("bill7").value="909945464";
+       document.getElementById("bill8").value="abhinav@gmail.com";
+       document.getElementById("notes").value="Billing Information Provided";
+       
+        
+   };
+ 
+</script>
+
+
+
+
+
+
+
+</body>
+</html>
