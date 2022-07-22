@@ -58,6 +58,7 @@ else if(document.title=="Featured_Collection_Page")
 let vishwa_getdata=async()=>{
     let response = await fetch(vishwa_url_abc);
     let data=await response.json();
+
     console.log(data)
    vishwa_append(data)
 }
@@ -123,70 +124,91 @@ function vishwa_append(value)
         
 
          let div_3_wala=document.createElement("div");
-        div_3_wala.setAttribute("class","div_3_wala")
+        div_3_wala.setAttribute("id","div_3_wala")
 
+        
         let vishwa_addtocartbtn=document.createElement("button");
         vishwa_addtocartbtn.innerText="ADD TO CART"; 
-        vishwa_addtocartbtn.setAttribute("class","vishwa_addtocartbtn")
+        vishwa_addtocartbtn.setAttribute("id","vishwa_addtocartbtn")
         var count=0;
         
-
-
         vishwa_addtocartbtn.addEventListener("click",()=>{
-            
-            if(vishwa_addtocartbtn.innerHTML="ADD TO CART")
-            {
-                // count++;
-                vishwa_addtocartbtn.innerText="added" + "  " + count; 
-            }
-            
-            
-        })
-        div_3_wala.append(vishwa_addtocartbtn)
+          // data.forEach(function(){
 
-       
+               if(vishwa_addtocartbtn.innerHTML=="ADD TO CART")
+               {
+                   count++;
+                   vishwa_addtocartbtn.innerText="added" + "  " + count; 
+               }
+             });  
      
+             let v_plus =document.createElement("button");
+             v_plus.innerText="+";
+             v_plus.setAttribute("id","v_plus");
+             v_plus.addEventListener("click",()=>{
+               count++;
+               document.querySelector("#vishwa_addtocartbtn").innerText="added" + "  " + count; 
+           })
+         
+             let v_minus =document.createElement("button");
+             v_minus.innerText="-";
+             v_minus.setAttribute("id","v_minus");
+             v_minus.addEventListener("click",()=>{
+               count--;
+               document.querySelector("#vishwa_addtocartbtn").innerText="added" + "  " + count; 
+               if(count<=0)
+               {
+                    count=0;
+                    document.querySelector("#vishwa_addtocartbtn").innerText="Add to cart"; 
+               }
+     
+           })
+         
+          // })
+          
 
-
+        
+     div_3_wala.append(v_minus,vishwa_addtocartbtn,v_plus)
 
         vishwa_mrp_div.append(price,div_3_wala);
 
-        
-
-
-timimg_div.append(timimg_img,timimg_text)
+          timimg_div.append(timimg_img,timimg_text)
        
         vishwa_cart.append(img,name,details,quantity,vishwa_mrp_div,timimg_div);
         vishwa_products_grid.append(vishwa_cart); 
 
-        // vishwa_cart.addEventListener("click",function(){{
-        //     fun_vishwa_cart()
-        // }})
     })
 
 }
 
-function plus_minus_addtocart(){
-    let v_plus =document.createElement("button");
-    v_plus.innerText="+";
-    v_plus.setAttribute("class","v_plus");
-
-    let v_minus =document.createElement("button");
-    v_minus.innerText="-";
-    v_minus.setAttribute("class","v_minus");
-
-    v_plus.addEventListener("click",()=>{
-        count++;
-        document.querySelector(".vishwa_addtocartbtn").innerText=count;
-
-    })
-
-    v_minus.addEventListener("click",()=>{
-        count--;
-        document.querySelector(".vishwa_addtocartbtn").innerText=count;
-
-    })
+// //////////////////////////////////////////
 
 
+
+
+
+let vishwa_sort__by_price_button=document.querySelector("#vishwa_sort__by_price_button");
+vishwa_sort__by_price_button.addEventListener("click",function(){
+     fun_vishwa_sort__by_price_button();
+})
+function fun_vishwa_sort__by_price_button(){
+     vishwa_sort__by_price_button.style.backgroundColor="yellow";
+     let vishwa_database=JOSN.parse(localStorage.getItem("vishwa_local_storage")) || [];
+    
 
 }
+
+// "imgUrl": "https://d2407na1z3fc0t.cloudfront.net/prodDev/pr_av4kgtb3l1h/2/prod_display_image/1631077710.8126--2021-09-0810:38:30--1818",
+// "name": "Chicken Curry Cut (Small Pcs) - Large Pack",
+// "des": "Bone-in chunky pieces of skinless meat including Two le...",
+// "net_tag": "Net wt:",
+// "net": 1000,
+// "gross_tag": "Gross:",
+// "gross": 1026,
+// "unit": "gms",
+// "price_tag": "MRP:",
+// "cuurency": "₹",
+// "price": 271,
+// "strikedPrice": "350",
+// "off": "",
+// "off_tag": "%OFF"

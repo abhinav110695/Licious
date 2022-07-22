@@ -25,18 +25,22 @@ font-size: 11px;
 font-weight: 600;
 border-radius: 3px;
 }
-.div_3_wala{
-    border: blue 1px solid; 
-    height: 30px; width: 150px; display: flex;
+#div_3_wala{
+    /* border: blue 1px solid;  */
+    height: 30px; width: 200px; display: flex;
     gap: 5px;
     align-items: center; justify-content: center;
 } 
-.v_plus{
-height: 100%; border-radius: 50%; width: 20px;
+#v_plus,#v_minus{
+height: 100%; border-radius: 50%; width: 20px; background-color: #D11243; color: white;
+text-align: center; 
+border: none; font-size: 20px; font-weight: bolder; 
 }
-.v_minus{
-    height: 100%;
-}
+/* #v_plus:hover,#v_minus:hover{
+    width:30px;
+} */
+/* #vishwa_addtocartbtn:hover{ width: 120px;} */
+
 
 
 
