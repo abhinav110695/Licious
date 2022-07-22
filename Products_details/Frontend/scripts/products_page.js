@@ -569,3 +569,6 @@ CartDetials.forEach((ele) => {
 
   // document.getElementById("FloatCart_page").append(div1,div2)
 });
+
+
+
