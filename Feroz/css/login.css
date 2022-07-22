@@ -85,24 +85,35 @@
      margin-top:200px;
      margin-left:30px;
  }
- #scroll h3{
-     font-size:25px;
-    margin-top:55px;
+ #licious{
+  color:white;
+ }
+
+ #title{
+     font-size:22px;
+    margin-top:20px;
      margin-left:85px;
+     color:rgb(31, 27, 27);
  }
 #enter{
      color:grey;
      margin-left:30px;
+     margin-top:25px;
+     font-size:12px;
  }
  #number{
     height:32px;
      width:80%;
      margin:auto;
-     margin-top:20px;
+     margin-top:25px;
      margin-left:25px;
      text-align: center;
      border:0;
-     box-shadow: rgba(22, 22, 24, 0.1) 0px 10px 10px -10px;
+     box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+ }
+ #number:hover{
+color:teal;
+
  }
  #otp{
     height:30px;
@@ -112,27 +123,31 @@
     margin-left:25px;
     text-align: center;
     border:0;
-    box-shadow: rgba(22, 22, 24, 0.1) 0px 10px 10px -10px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+}
+#otp:hover{
+  color:teal;
 }
 #signhojao{
-     height:35px;
+     height:38px;
      width:80%;
      border:0;
      margin-top:25px;
      margin-left:25px;
-     background-color:Black;
-     color:white;
+     background-color:rgb(240, 245, 245);
+     color:rgb(90, 73, 73);
  }
  #signhojao:hover{
      color:white;
      font-weight: bold;
-     background-color: chartreuse;
+     background-color: rgb(219, 82, 19);
      cursor: pointer;
  }
 
  #term{
      font-size:15px;
      margin-left:55px;
+     margin-top:15px;
  }
  .red{
      color:red;
@@ -143,6 +158,8 @@
     border:0;
     background-color:white;
     margin-top:5px;
+    margin-left:5px;
+    font-size: 16px;;
  }
  #go_to_login:hover{
     cursor: pointer;

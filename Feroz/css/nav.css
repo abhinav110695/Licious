@@ -1,3 +1,4 @@
+
 #navbar{
     height:80px; width:auto; 
     /* border:1px solid black; */
@@ -8,7 +9,8 @@
 }
 #logo{
     margin-left:25px;
-    margin-top:50px;
+    margin-top:20px;
+    margin-bottom:-15px;
 }
 #tag{
     width:90px;
@@ -24,10 +26,10 @@ height:50px;width:100px;
 margin-bottom:20px;
 }
 #search_bar{
-    height:35px; width:28%;
+    height:35px; width:28%; text-align: center;
     border:0;
     margin-bottom:20px;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    box-shadow: rgba(255, 255, 255, 0.2) 0px 0px 0px 1px inset, rgba(0, 0, 0, 0.9) 0px 0px 0px 1px;
     border-radius:5px;
 }
 
@@ -39,7 +41,8 @@ margin-bottom:20px;
     margin-top:25px;
 }
 #cat{
-    margin-top:-22px;
+    margin-bottom:20px;
+
 }
 
 /* dropDown content  */
@@ -69,7 +72,7 @@ margin-bottom:20px;
     display: none;
     position: absolute;
     background-color: #f9f9f9;
-    min-width: 100px;
+    min-width: 300px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
   }
@@ -101,25 +104,36 @@ margin-bottom:20px;
 }
  .dropbtn {
     color:black;
-    margin-bottom:22px;
+    margin-bottom:30px;
+ }
+ .dropbtn:hover{
+  cursor:pointer;
  }
 
 #cs_login{
     display: flex;
     margin-bottom:20px;
 }
+#account{
+  height:30px;
+  width:30px;
+}
 #add_to_cart{
 display: flex;
 
 }
 #cart{
-    margin-top:10px;
+    margin-bottom:10px;
     height:30px; width:35px;
 }
 #bag{
-    margin-left:10px;
+    margin-top:8px;
+    margin-left:5px;
 }
 *{
     text-decoration: none;
     color:black;
+    margin:0;
+    padding:0;
+    font-family:arial;
 }

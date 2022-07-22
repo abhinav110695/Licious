@@ -20,6 +20,9 @@
             <option value="delhi">Delhi</option>
             <option value="Hyder">Hyderabad</option>
             <option value="Bang">Bangalore</option>
+            <option value="chennai">Chennai</option>
+            <option value="munbai">Mumbai</option>
+            <option value="up">Lucknow</option>
     </select>
     
         <img id="location_logo" src="https://www.licious.in/img/rebranding/location_icon.svg" alt="location_logo">
@@ -29,6 +32,9 @@
 <!-- search tag -->
     <input  id="search_bar" type="text" placeholder="Search  For Any Delicious Product">
 
+
+
+    
     <!-- categories part  -->
     <!-- dropdown menu part  -->
     
@@ -71,16 +77,38 @@
          <!-- Modal Content -->
          <div id="sidebar_close">
            <div id="scroll">
-               <h3>Signin / Signup</h3>
-               <p id="enter">Enter Mobile Number</p>
+                <p id="licious"> text</p>
+               <h3 id="title">Signin / Signup</h3>
+               <!-- <p id="enter">Enter Mobile Number</p> -->
                <input id="number" type="text" placeholder="Enter Mobile Number">
-               <input  id="otp" type="number" placeholder="Enter OTP">
+               <input  id="otp" type="text" placeholder="Enter OTP">
                <button id="signhojao" onclick="login()" >Proceed Via OTP</button>
                <p id="term">By signing in you agree to our </p>
                <p class="red">Terms and conditions</p>
            </div>
            </div>
        </div>
+       <script>
+       function login(){
+        let signupObj={
+            nmber : document.getElementById("number").value,
+            otp : document.getElementById("otp").innerText="1234"
+            
+        };
+        console.log(signupObj.otp)
+        if(signupObj.otp == "1234"){
+            alert("Login Success")
+            window.location.href="#"
+        }
+        else{
+            alert("Invalid Otp")
+        }
+        // console.log(signupObj)
+        // alert("Login Success")
+    }
+        // localStorage.setItem("signup", JSON.stringify(signupObj))
+       
+       </script>
      
 
        </div> 
@@ -88,7 +116,7 @@
        <!-- cart page  -->
        <div id="add_to_cart">
         <a href="#"><img id="cart" src="https://www.licious.in/img/rebranding/cart_icon.svg" alt="cart"></a>
-        <a href=""><p id="bag">Cart</p></a>
+        <a href="#"><p id="bag">Cart</p></a>
 
         <!-- add cart page code html code here -->
 
