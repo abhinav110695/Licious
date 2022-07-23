@@ -35,7 +35,7 @@ homeappend(home2arr,home2)
 //#home_3
 let home3=document.querySelector("#home_3")
 let ads_img=document.createElement("img")
-ads_img.src="../homepage_ss/ads.png"
+ads_img.src="./abhinav/homepage_ss/ads.png"
 home3.append(ads_img)
 home3.addEventListener("click",()=>{
     ad()
@@ -49,7 +49,7 @@ let ad=()=>{
 //#home_5
 let home5=document.querySelector("#home_5")
 let ads2_img=document.createElement("img")
-ads2_img.src="../homepage_ss/ads2.png"
+ads2_img.src="./abhinav/homepage_ss/ads2.png"
 home5.append(ads2_img)
 
 //#home_6

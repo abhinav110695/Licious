@@ -1,0 +1,118 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #searchcontainer{
+    border: 1px solid transparent;
+    width: 60%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(auto);
+    gap:10px 30px;
+    background-color: rgb(249,248,249);
+}
+#bigboxs{
+    display: flex;
+    border: 1px solid transparent;
+    border-bottom: 1px solid rgb(219,218,219);
+    width: 100%;
+    padding: 10px 0px;
+    cursor: pointer;
+}
+
+#box1s{
+    width: 20%;
+}
+#box2s{
+    width: 60%;
+}
+#box3s{
+    width: 20%;
+}
+#searchimage{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+#searchtitle{
+    margin-top: 0px;
+    margin-left: 10px;
+}
+#searchprice{
+    margin-bottom: 0px;
+    margin-left: 10px;
+}
+
+#searchbut{
+    margin-top: 41px;
+    font-size: 8px;
+    width: 100%;
+    height: 40%;
+    border-radius: 5px;
+    border-color: rgb(241, 29, 82);
+    color: rgb(209,19,66);
+    font-weight: bold;
+    background: rgb(249,248,249);
+}
+</style>
+<body>
+    <div id="searchcontainer"></div>
+</body>
+</html>
+<script>
+    let data=JSON.parse(localStorage.getItem("searchresult"));
+    console.log(data)
+
+
+    // function appendsearchvalue(value) {
+    let searchcontainer = document.getElementById("searchcontainer");
+    searchcontainer.innerHTML = null;
+    data.forEach( (val) => {
+      
+      let name = document.createElement("p");
+      name.innerHTML = val.name;
+      name.setAttribute("id","searchtitle")
+
+      let image = document.createElement("img");
+      image.src = val.imgUrl;
+      image.setAttribute("id","searchimage")
+
+      let price = document.createElement("p");
+      price.innerHTML = "₹" + val.price;
+      price.setAttribute("id","searchprice")
+
+        let but=document.createElement("button")
+        but.innerText="ADD TO CART"
+        but.setAttribute("id","searchbut")
+
+        let box1=document.createElement("div")
+        box1.append(image)
+        box1.setAttribute("id","box1s")
+
+        let box2=document.createElement("div")
+        box2.append(name,price)
+        box2.setAttribute("id","box2s")
+
+        let box3=document.createElement("div")
+        box3.append(but)
+        box3.setAttribute("id","box3s")
+
+        let bigbox = document.createElement("div");
+        bigbox.setAttribute("id","bigboxs")
+
+        bigbox.append(box1,box2,box3)
+        bigbox.addEventListener("click",()=>{
+            window.location.href=""
+        })
+        searchcontainer.append(bigbox)
+    //   div.append(image, name, price, rating);
+
+    //   box.append(div);
+    });
+//   }
+</script>
