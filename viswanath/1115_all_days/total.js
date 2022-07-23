@@ -6,7 +6,7 @@ if(document.title=="Chicken_Page")
 }
 else if(document.title=="Todays_Deal")
 {
-     vishwa_url_abc="http://localhost:3000/api/fish"
+     vishwa_url_abc="http://localhost:3000/api/bestSeller"
 }
 else if(document.title=="Fish_Page")
 {
@@ -18,11 +18,11 @@ else if(document.title=="Mutton_Page")
 }
 else if(document.title=="Ready_To_Cook_Page")
 {
-     vishwa_url_abc="http://localhost:3000/api/Mutton_data"
+     vishwa_url_abc="http://localhost:3000/api/Dishes_of_chicken"
 }
 else if(document.title=="Prawns_Page")
 {
-     vishwa_url_abc="http://localhost:3000/api/Mutton_data"
+     vishwa_url_abc="http://localhost:3000/api/sauce"
 }
 
 else if(document.title=="Cold_Cuts_Page")
@@ -50,29 +50,25 @@ else if(document.title=="Featured_Collection_Page")
      vishwa_url_abc="http://localhost:3000/api/fish"
 }
 
-
 let vishwa_product_head_name=document.querySelector
 ("#vishwa_product_head_name");
 
-
-
-
 let data;
 let vishwa_getdata=async()=>{
-    let response = await fetch(vishwa_url_abc);
-     data=await response.json();
+let response = await fetch(vishwa_url_abc);
+data=await response.json();
 
 //     console.log(data)
-   vishwa_append(data)
+vishwa_append(data)
 }
 vishwa_getdata();
 
 function vishwa_append(value)
 {
      var count=0;
-    let vishwa_products_grid=document.querySelector("#vishwa_products_grid");
-    vishwa_products_grid.innerHTML=null;
-    value.forEach(function (ele){
+     let vishwa_products_grid=document.querySelector("#vishwa_products_grid");
+     vishwa_products_grid.innerHTML=null;
+     value.forEach(function (ele){
         let vishwa_cart=document.createElement("div");
         vishwa_cart.setAttribute("class","vishwa_cart")
         
@@ -118,8 +114,6 @@ function vishwa_append(value)
         vishwa_off.innerText=m111+"%"+"OFF"
         vishwa_off.setAttribute("class","vishwa_off")
 
-
-
         let vishwa_mrp_div=document.createElement("div");
         vishwa_mrp_div.setAttribute("class","vishwa_mrp_div");
 
@@ -133,28 +127,20 @@ function vishwa_append(value)
         timimg_text.innerText="Today in 90 min"
         timimg_text.setAttribute("class","timimg_text")
         
-
          let div_3_wala=document.createElement("div");
         div_3_wala.setAttribute("id","div_3_wala")
-
 
         let vishwa_addtocartbtn=document.createElement("button");
         vishwa_addtocartbtn.innerText="ADD TO CART"; 
         vishwa_addtocartbtn.setAttribute("id","vishwa_addtocartbtn")
-       
-        
+              
         vishwa_addtocartbtn.addEventListener("click",()=>{
           count=count+ (+ele.price);
-         
-          // for(let t=0;t<data.length;t++)
-          {
-               // alert(data[i].name + " " +"Added to the cart")
-          }
          
         })
 
         
-     div_3_wala.append(vishwa_addtocartbtn)
+        div_3_wala.append(vishwa_addtocartbtn)
 
         vishwa_mrp_div.append(price,vishwa_striked_price,vishwa_off,div_3_wala);
 
@@ -182,7 +168,7 @@ function vishwa_sort_by_price_button(){
 });
 vishwa_append(data)
 // console.log(data)
-     }
+}
 
 function vishwa_sort_by_weight_button(){
 
