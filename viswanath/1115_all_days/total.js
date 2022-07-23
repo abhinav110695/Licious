@@ -51,6 +51,10 @@ else if(document.title=="Featured_Collection_Page")
 }
 
 
+let vishwa_product_head_name=document.querySelector
+("#vishwa_product_head_name");
+
+
 
 
 let data;
@@ -86,7 +90,7 @@ function vishwa_append(value)
 
         let net_wt=document.createElement("p");
         net_wt.setAttribute("class","vishwa_net_wt")
-        net_wt.innerText=ele.net_tag +":" + " "+ ele.net +"   "+
+        net_wt.innerText=ele.net_tag  + " "+ ele.net +"   "+
          ele.unit;
         
         let gross_tag=document.createElement("p");
@@ -99,8 +103,22 @@ function vishwa_append(value)
 
       
         let price=document.createElement("p");
-        price.innerText="MRP "+"₹ : " + ele.price;
+        price.innerText="MRP "+"₹:" + ele.price;
         price.setAttribute("class","vishwa_price")
+
+        let vishwa_striked_price=document.createElement("p");
+        vishwa_striked_price.innerText="MRP"+ "₹:" + ele.strikedPrice;
+        vishwa_striked_price.setAttribute("class","vishwa_striked_price")
+
+        var a111=Math.random()
+        var  m111= (Math.ceil(a111*35)); 
+     //    console.log(m1)
+
+        let vishwa_off=document.createElement("p");
+        vishwa_off.innerText=m111+"%"+"OFF"
+        vishwa_off.setAttribute("class","vishwa_off")
+
+
 
         let vishwa_mrp_div=document.createElement("div");
         vishwa_mrp_div.setAttribute("class","vishwa_mrp_div");
@@ -119,23 +137,26 @@ function vishwa_append(value)
          let div_3_wala=document.createElement("div");
         div_3_wala.setAttribute("id","div_3_wala")
 
-        
+
         let vishwa_addtocartbtn=document.createElement("button");
         vishwa_addtocartbtn.innerText="ADD TO CART"; 
         vishwa_addtocartbtn.setAttribute("id","vishwa_addtocartbtn")
        
         
         vishwa_addtocartbtn.addEventListener("click",()=>{
-
-      
-          count=count+ +(ele.price);
+          count=count+ (+ele.price);
+         
+          // for(let t=0;t<data.length;t++)
+          {
+               // alert(data[i].name + " " +"Added to the cart")
+          }
          
         })
 
         
      div_3_wala.append(vishwa_addtocartbtn)
 
-        vishwa_mrp_div.append(price,div_3_wala);
+        vishwa_mrp_div.append(price,vishwa_striked_price,vishwa_off,div_3_wala);
 
           timimg_div.append(timimg_img,timimg_text)
        
@@ -146,50 +167,46 @@ function vishwa_append(value)
 
 }
 
-
 let getData=async()=>{
      let res=await fetch("http://localhost:3000/api/Chicken_data");
      let data=await res.json();
-     // console.log(data[0].price)
+    
 }
-     getData()
+ getData()
 
-     function vishwa_sort__by_price_button(){
+function vishwa_sort_by_price_button(){
           
-          data=data.sort(function (a, b) {
+     data=data.sort(function (a, b) {
            
-                         return a.price - b.price;
-                       });
-
-                    //    console.log(data);
-// alert("hello");
+     return a.price - b.price;
+});
 vishwa_append(data)
-console.log(data)
+// console.log(data)
      }
 
+function vishwa_sort_by_weight_button(){
+
+data=data.sort(function (a, b) {
+
+return a.net - b.net;
+});
+vishwa_append(data)
+// console.log(length)
+console.log(data)
+}
+
+function vishwa_sort_by_name_button(){   
+{
+     data=data.sort(function(a,b){
+     let c=a.name.toUpperCase();
+     let cc=b.name.toUpperCase();
+     if(c<cc){ return -1}
+     if(c>cc){return 1}
+     // return 0;
+     })   
+}
+vishwa_append(data)
+}
 
 
-
-//     <select id="sortSalary" onChange="handleSalarySort()">
-//     //       <option>Sort By Salary</option>
-//     //       <option value="HTL">High to Low</option>
-//     //       <option value="LTH">Low to High</option>
-//     //     </select>
-//     function handleSalarySort() {
-//       var selected = document.querySelector("#sortSalary").value;
-//       //console.log(selected);
-//       if (selected == "HTL") {
-//         jobArr.sort(function (a, b) {
-//           return b.personSalary - a.personSalary;
-//         });
-//         // console.log(jobArr);
-//         displayData(jobArr);
-//       }
-//       if (selected == "LTH") {
-//         jobArr.sort(function (a, b) {
-//           return a.personSalary - b.personSalary;
-//         });
-//         // console.log(jobArr);
-//         displayData(jobArr);
-//       }
-//     }
+   
