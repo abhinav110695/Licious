@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart Page Implement</title>
+    <link rel="stylesheet" href="../Styles/cartPage.css">
+</head>
+<body>
+
+
+    <!------------- Header ----------->
+
+
+
+       <!--------- CART PAGE  ------>
+    
+    <div id="cartpageStart">
+        <h2>SHOPPING CART</h2>
+    </div>
+    <div>
+        <table id="table-cart">
+            <thead>
+                <tr id="header">
+                    <th>Product Name</th>
+                    <th>Unit Price</th>
+                    <th>Quantity</th>
+                    <th>Total</th>
+                    <th>Remove</th>
+                </tr>
+            </thead>
+            <tbody id="table-data">
+
+            </tbody>
+        </table>
+        <!-- .................................................. -->
+        <div id="cart1Pay">
+            <div><a href="productPage.html">CONTINUE SHOPPING</a></div>
+            <div style="color: white"><a href="addressPage.html">PROCEED TO PAY</a></div>
+        </div>
+        <!-- ............................................... -->
+        <div id="summary">
+            <div>Order Summary</div>
+        </div>
+        <div class="summary">
+            <div>Cart Sub Total:</div>
+            <div id="cartTotalPrice"></div>
+            <!-- ₹ 8398 -->
+        </div>
+        <div class="summary">
+            <div>GST 12%</div>
+            <div id="cartGst12"></div>
+        </div>
+        <div class="summary">
+            <div>GST 18%</div>
+            <div id="cartGst18"></div>
+        </div>
+        <div id="cart1LastSummary" class="summary">
+            <div>Total Cart Amount</div>
+            <div id="totalCartAmount"></div>
+        </div>
+    </div>
+    <!-- ............................................. -->
+    <div id="cartRedeemBox">
+        <div class="cartRedeemContainer">
+            <div id="cart1Redeem">
+                <div>
+                    REDEEM DISCOUNT
+                </div>
+            </div>
+            <div><b>Use your voucher code</b><br>
+                <span id="cartSpecialColor">Only one coupon code can be used per order at this time.</span>
+            </div>
+        </div>
+        <div class="cartRedeemContainer">
+            <div id="cart1Voucher">
+                Voucher code
+            </div>
+            <div id="cartVoucherInputHeight">
+                <input id="cartVoucherInput" type="text">
+            </div>
+        </div>
+        <div class="cartRedeemContainer">
+            <div id="cart1ReddemApply">
+                Apply
+            </div>
+        </div>
+    </div>
+</body>
+</html>
