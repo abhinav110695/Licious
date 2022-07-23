@@ -1,5 +1,4 @@
 
-
 var vishwa_url_abc;
 if(document.title=="Chicken_Page") 
 {
@@ -133,41 +132,6 @@ function vishwa_append(value)
          
         })
 
-
-     //      // data.forEach(function(){
-
-     //           if(vishwa_addtocartbtn.innerHTML=="ADD TO CART")
-     //           {
-     //               count++;
-     //               vishwa_addtocartbtn.innerText="added" + "  " + count; 
-     //           }
-     //         });  
-     
-     //         let v_plus =document.createElement("button");
-     //         v_plus.innerText="+";
-     //         v_plus.setAttribute("id","v_plus");
-     //         v_plus.addEventListener("click",()=>{
-     //           count++;
-     //           document.querySelector("#vishwa_addtocartbtn").innerText="added" + "  " + count; 
-          //  })
-         
-     //         let v_minus =document.createElement("button");
-     //         v_minus.innerText="-";
-     //         v_minus.setAttribute("id","v_minus");
-     //         v_minus.addEventListener("click",()=>{
-     //           count--;
-     //           document.querySelector("#vishwa_addtocartbtn").innerText="added" + "  " + count; 
-     //           if(count<=0)
-     //           {
-     //                count=0;
-     //                document.querySelector("#vishwa_addtocartbtn").innerText="Add to cart"; 
-     //           }
-     
-     //       })
-         
-          // })
-          
-
         
      div_3_wala.append(vishwa_addtocartbtn)
 
@@ -183,37 +147,24 @@ function vishwa_append(value)
 }
 
 
-
-
-
-// let vishwa_sort__by_price_button=document.querySelector("#vishwa_sort__by_price_button");
-// vishwa_sort__by_price_button.addEventListener("click",function(){
-//      fun_vishwa_sort__by_price_button();
-// })
-// function fun_vishwa_sort__by_price_button(){
-//      vishwa_sort__by_price_button.style.backgroundColor="yellow";
-//      let vishwa_database=JOSN.parse(localStorage.getItem("vishwa_local_storage")) || [];
-// }
-
 let getData=async()=>{
      let res=await fetch("http://localhost:3000/api/Chicken_data");
      let data=await res.json();
-     console.log(data[0].price)
+     // console.log(data[0].price)
 }
-
-
      getData()
 
      function vishwa_sort__by_price_button(){
           
           data=data.sort(function (a, b) {
-               a=+a; b=+b;
-                         return b.price - a.price;
+           
+                         return a.price - b.price;
                        });
 
                     //    console.log(data);
 // alert("hello");
-console.log(data[0].price)
+vishwa_append(data)
+console.log(data)
      }
 
 
