@@ -1,0 +1,368 @@
+#MainContentLogin{
+  background-color: white;
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 400px;
+  height: 100vh;
+  z-index: 2000;
+  transition: .5s ease;
+  box-shadow: rgb(0, 0, 0) 0px 30px 90px;
+  background-image: url(https://www.licious.in/img/rebranding/user-login.png);
+}
+
+.DisplayTheactivness{
+  right: 0!important;
+}
+
+#closeloginbtna{
+  position: fixed;
+  display: none;
+  top: 0;
+  right: 30px;
+  font-size: 50px;
+  cursor: pointer;
+  
+}
+
+#closeTheimgTagForCart{
+  width: 30px;
+  height: 30px;
+  /* border: 3px solid rgb(14, 13, 13); */
+  border-radius: 15px;
+}
+
+/* #logouttext{
+  font-family: Lato;
+  font-size: 13px;
+  font-weight: bolder;
+  margin-left: 5px;
+  color: black;
+  border: none;
+  background-color: white;
+  cursor: pointer;
+  display: none;
+  margin-top: 28px;
+} */
+/* #logouttext:hover{
+
+  color: red;
+  border: none;
+} */
+
+#LoginImglogo{
+  /* border: 1px solid black; */
+  height: 280px;
+  margin-left: 20px;
+  margin-top: 20px;
+  
+}
+
+/* #liciousloginbanner{
+  width: 100%;
+  height: 10px;
+} */
+
+#Nameofsig_log{
+  /* border: 1px solid white; */
+  background-color: white;
+  width: 90%;
+  margin: auto;
+  height: 100%;
+  /* margin-top: 5px; */
+  border-radius: 8px;
+  /* margin-top: -100px; */
+}
+
+#loginNameNavbar>p{
+font-size: 25px;
+margin: auto;
+padding: 10px;
+}
+
+#InputNameform{
+  /* border: 1px solid black; */
+  width: 90%;
+  margin-left: 10px;
+  /* height: 65px; */
+}
+#MobleNoInput{
+  margin-left: 8px;
+width: 95%;
+height: 59px;
+font-size: 19px;
+color: black;
+border: none;
+}
+#sinupOtp{
+  font-size: 17px;
+  margin-top: 20px;
+  margin-left: 8px;
+}
+#Otpfieldsinput{
+  
+  /* border: 1px solid black; */
+  width: 90%;
+  height: 60px;
+  margin-left: 10px;
+}
+#OneTimePassword{
+  margin-left: 8px;
+  width: 95%;
+height: 59px;
+font-size: 19px;
+color: black;
+border: none;
+
+}
+#line{
+  margin-top: 0px;
+}
+#proceed{
+  /* border: 1px solid black; */
+  height: 48px;
+  width: 93%;
+  margin: auto;
+  border-radius: 4px;
+  margin-top: 10px;
+}
+#confirmLogin{
+  width: 80%;
+  height: 48px;
+  border-radius: 4px;
+  font-size: 20px;
+  border: none;
+  background-color: lightgray;
+  color: white;
+  font-family: sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+  margin-left: 30px;
+  margin-top: 40px;
+}
+#confirmLogin:hover{
+  background-color: crimson;
+}
+
+#terms_conditions{
+  font-size: 15px;
+  margin-left: 20px;
+  margin-top: 50px;
+  color: rgb(32, 31, 31);
+}
+/* .tC{
+  text-decoration: none;
+  color: crimson;
+} */
+
+
+/* -------------------------------------------------------------------------navbar css */
+
+
+#navbar{
+  height:80px; width:auto; 
+  /* border:1px solid black; */
+  justify-content:space-around;
+  align-items: flex-end;
+  display:flex;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+#logo{
+  margin-left:25px;
+  margin-top:20px;
+  margin-bottom:-15px;
+}
+#tag{
+  width:90px;
+  margin-bottom:25px;
+  border:0;
+}
+#tag:hover{
+  color:green;
+  border:0;
+}
+#licious_logo{
+height:50px;width:100px;
+margin-bottom:20px;
+}
+#search_bar{
+  height:35px; width:28%; text-align: center;
+  border:0;
+  margin-bottom:20px;
+  box-shadow: rgba(255, 255, 255, 0.2) 0px 0px 0px 1px inset, rgba(0, 0, 0, 0.9) 0px 0px 0px 1px;
+  border-radius:5px;
+}
+
+/* dropdown content  */
+#cate{
+  display: flex;
+  justify-content: space-around;
+  /* align-items: center; */
+  margin-top:25px;
+}
+#cat{
+  margin-bottom:20px;
+
+}
+
+/* dropDown content  */
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+/* Dropdown button */
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: black;
+  padding: 22px 16px;
+  background-color: inherit;
+  font-family: inherit; 
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: #ddd;
+}
+
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 300px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 14px 20px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.dropdown-content>a>img{
+  height:30px;
+  width:30px;
+  margin-left:12px;
+  margin-right:8px;
+}
+.dropbtn {
+  color:black;
+  margin-top:35px;
+}
+.dropbtn:hover{
+cursor:pointer;
+}
+
+#cs_login{
+  display: flex;
+  margin-bottom:20px;
+}
+#account{
+height:30px;
+width:30px;
+}
+#add_to_cart{
+display: flex;
+
+}
+#cart{
+  margin-bottom:10px;
+  height:30px; width:35px;
+}
+#bag{
+  margin-top:8px;
+  margin-left:5px;
+}
+
+
+/* ===============CART SECTIONS================================================================================= */
+
+#mainCartContantPagr {
+  background-color: white;
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 400px;
+  height: 100vh;
+  z-index: 2000;
+  transition: 0.5s ease;
+  box-shadow: rgb(0, 0, 0) 0px 30px 90px;
+}
+
+.DisplayTheactivnessFrocart {
+  right: 0 !important;
+}
+
+#CloseCartBtn {
+  position: fixed;
+  display: none;
+  top: 0;
+  right: 30px;
+  font-size: 50px;
+  cursor: pointer;
+  color: black;
+}
+
+#closeTheimgTagClose {
+  width: 30px;
+  height: 30px;
+  color: black;
+}
+
+/* ---------------------------------------karishma--- */
+
+#non-empty::after {
+  content: var(--after-content);
+  font-size: 25px;
+  width: 25px;
+  display: inline-block;
+  text-align: center;
+  position: relative;
+  top: -20px;
+  right: 20%;
+  background-color: red;
+  border-radius: 50%;
+}
+#login{
+  display:flex;
+  margin-top:-5px;
+  /* border:1px solid black; */
+  margin-top: -30px;
+}
+#logintext{
+  border:0;
+  background-color: white;
+  margin-top:-15px;
+  margin-bottom:-75px;
+}
+.login{
+  margin-bottom: 22px;
+}
+
+#totalpriceShow{
+  /* margin-bottom: 30px; */
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  padding: 2px;
+  transform: rotate(0deg)
+  
+
+}
