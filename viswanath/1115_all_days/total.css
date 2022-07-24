@@ -1,0 +1,195 @@
+
+
+
+#div_3_wala{
+    /* border: blue 1px solid;  */
+    height: 30px; width: auto; display: flex;
+    gap: 5px;
+    align-items: center;
+    justify-content: space-evenly;
+} 
+/* #v_plus,#v_minus,#v_center{
+height: 100%; border-radius: 50%; width: 20px; background-color: #D11243; color: white;
+text-align: center; 
+border: none; font-size: 20px; font-weight: bolder; 
+} */
+/* #v_plus:hover,#v_minus:hover{
+    width:30px;
+} */
+/* #vishwa_addtocartbtn:hover{ width: 120px;} */
+
+.timimg_img{
+    height: 100%; 
+}
+.timimg_text{
+    color: grey; 
+}
+
+
+.timing_div{
+    display: flex; margin: auto;
+    /* border: black 1px solid; */
+    height: 25px;
+    justify-content: center; margin-top: 20px;
+    /* margin-bottom: -10px; */
+    align-items:center; gap: 10px; font-size: 15px;
+}
+#vishwa_addtocartbtn{ font-size: 11px;
+    text-transform: uppercase;
+    color: #fff;
+    border: none;
+    /* padding: 5px 3px; */
+    cursor: pointer;
+    font-weight: 600;
+    border-radius: 5px;
+    background-color: #D11243;
+    
+    height: 30px;
+    width: 90px;
+    font-size: 11px;
+       
+    
+    font-weight: 600;
+    border-radius: 3px;
+    }
+.vishwa_striked_price{ font-size: 14px;
+    color: grey; font-family: Lato!important; font-weight: 100; text-decoration: line-through;
+}
+.vishwa_off{
+    font-size: 14px;
+     color: green; font-family: Lato!important;  
+}
+.vishwa_mrp_div{
+    display: flex;
+    /* border: blue 1px solid; */
+    justify-content: space-around; margin-top: 0px;
+    align-items: center;
+   color: #D11243;        font-family: 'Lato', sans-serif;
+   width: 90%; margin: auto;
+   font-size:14px; font-weight: bolder;
+}
+.vishwa_quantity{
+    display: flex; width: 90%; margin: auto; margin-bottom:10px ;
+    /* border: red 1px solid; */
+    justify-content: flex-start; gap: 30px;
+    font-family: 'Source Sans Pro';
+font-size: 14px;
+font-weight: 600;     color: #4a4a4a;
+    
+}
+.vishwa_net_wt{
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 25px;
+    position: relative;
+    font-family: 'Source Sans Pro';
+    font-size: 14px;
+    font-weight: 600;     color: #4a4a4a;
+    cursor: pointer;
+}
+.vishwa_name{
+    font-size: 15px; margin-left: 5%; margin-top: 25px;
+    margin-bottom: 25px;
+    font-weight: 600;  color: #4a4a4a; 
+   white-space: normal;
+
+  font-family: Lato!important;
+}
+.vishwa_details{
+    margin-left: 5%;
+    font-family: 'Source Sans Pro';
+font-size: 14px;
+color: #727272;
+line-height: 1.2;
+white-space: nowrap;
+margin-bottom: 10px;
+text-overflow: ellipsis;
+overflow: hidden;
+}
+
+#vishwa_body_products_page{ background-color: #F7F6F6;}
+#vishwa_products_grid{
+   
+    display: grid; gap: 25px 15px ; width: 75%; 
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(5, 450px);
+    /* border: red 1px solid; */
+    margin: auto; 
+    margin-top: 30px;
+}
+
+.vishwa_cart{
+    height: 100%; width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;    
+    border-radius: 10px;
+    margin-bottom: 20px;
+    display: block;
+    height: 450px;
+}
+.vishwa_img{
+    height: 50%; width: 100%;  border-radius: 10px;
+}
+
+
+*{
+Padding: 0px;
+Margin: 0px ;
+}
+#vishwa_sort_by_price_button:hover,
+ #vishwa_sort_by_weight_button:hover,
+  #vishwa_sort_by_name_button:hover{
+    background-color: rgb(248, 248, 248);
+  }
+#vishwa_sort_by_price_button,
+ #vishwa_sort_by_weight_button,
+  #vishwa_sort_by_name_button{
+ height: auto;
+     cursor:pointer;
+    
+    padding: 9px 12px;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    background: #FFF;
+    border: 1px solid #DEE2E6;
+    box-sizing: border-box;
+    border-radius: 4px;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    color: #212529;
+    margin-left: 12px;
+    text-transform: capitalize;
+    min-width: -webkit-fit-content;
+    min-width: -moz-fit-content;
+    min-width: fit-content;
+  }
+
+#vishwa_sorting_div{height: auto; width: auto; 
+    /* border: teal 1px solid;  */
+    margin: auto; display: flex; gap: 2px;
+    align-items: center; justify-content: flex-start;
+    margin-top: 30px; width: 75%;
+    /* background-color: #D11243;  color: white; */
+ }
+ #vishwa_product_head_name{
+    /* border: red 1px solid; */
+    width: 30%; display: flex;
+    align-items: center; justify-content: flex-start;
+    margin-left: 13%;
+    color:#585858;
+    font-size: 24px;
+    font-family: Lato!important;
+    font-weight: 700!important;
+    display: inline-block;
+    vertical-align: middle; margin-top: 20px;
+ }
+
+
+#badi_maa{
+ height: auto; width: auto; border: red 1px solid;
+}
+

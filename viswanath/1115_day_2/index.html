@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index</title>
+</head>
+<style>
+
+</style>
+<body id="vishwa_body_products_page">
+    <div id="vishwa_products_grid">
+
+    </div>
+    
+</body>
+</html>
+<script>
+    
+    let vishwa_getdata=async()=>{
+        let response = await fetch("http://localhost:3000/api/Chicken_Data");
+        let data=await response.json();
+        console.log(data)
+       vishwa_append(data)
+    }
+    vishwa_getdata();
+
+    function vishwa_append(value)
+    {
+        let vishwa_products_grid=document.querySelector("#vishwa_products_grid");
+        vishwa_products_grid.innerHTML=null;
+        value.forEach(function (ele){
+            let vishwa_cart=document.createElement("div");
+            vishwa_cart.setAttribute("class","vishwa_cart")
+            
+            let name=document.createElement("p");
+            name.innerText=ele.name;
+            name.setAttribute("class","vishwa_name")
+            
+
+            let img=document.createElement("img");
+            img.src=ele.imgUrl;
+            img.setAttribute("class","vishwa_img")
+
+            let details=document.createElement("p");
+            details.innerText=ele.des;
+            details.setAttribute("class","details")
+
+            let net_wt=document.createElement("p");
+            net_wt.innerText=ele.net_tag+ ele.net +"   "+ ele.unit;
+          
+
+            // let net_value=document.createElement("p");
+            // net_value.innerText=ele.net;
+
+            let gross_tag=document.createElement("p");
+            gross_tag.innerText=ele.gross_tag +"   " + ele.gross;
+        
+            
+
+            let quantity=document.createElement("div")
+            quantity.setAttribute("class","vishwa_quantity")
+            quantity.append(net_wt,gross_tag)
+
+
+            // let rate_nums=document.createElement("div")
+            // rate_nums.setAttribute("class","rate_nums")
+
+            
+
+            let price=document.createElement("p");
+            price.innerText="MRP "+"₹ : " + ele.price;
+            price.setAttribute("class","vishwa_price")
+
+            let vishwa_mrp_div=document.createElement("div");
+            vishwa_mrp_div.setAttribute("class","vishwa_mrp_div");
+
+            let addtocartbtn=document.createElement("button");
+            addtocartbtn.innerText="ADD TO CART"; 
+            addtocartbtn.setAttribute("class","addtocartbtn")
+            vishwa_mrp_div.append(price,addtocartbtn)
+
+            let timimg_div=document.createElement("div");
+            timimg_div.setAttribute("class","timing_div");
+
+            let timimg_img=document.createElement("img");
+            timimg_img.src="https://www.licious.in/img/rebranding/express_delivery.svg"
+            // timimg_img.setAttribute("class",timimg_img)
+            timimg_text=document.createElement("p");
+            timimg_text.innerText="Today in 90 min"
+            timimg_text.setAttribute("class","timimg_text")
+
+            
+            timimg_div.append(timimg_img,timimg_text)
+
+
+           
+            vishwa_cart.append(img,name,details,quantity,vishwa_mrp_div,timimg_div);
+            vishwa_products_grid.append(vishwa_cart); 
+
+           
+        })
+    }
+
+
+</script>
+<style>
+  
+    .timimg_img{
+        height: 100%; width: 100%;
+    }
+    .timimg_text{
+        color: grey; 
+    }
+    .addtocartbtn{ font-size: 11px;
+    text-transform: uppercase;
+    color: #fff;
+    border: none;
+    padding: 10px 12px;
+    cursor: pointer;
+    font-weight: 600;
+    border-radius: 5px;
+    background-color: var(--theme-color);
+    --theme-color: #D11243;
+    height: 30px;
+    width: 120px;
+    font-size: 11px;
+    font-weight: 600;
+    border-radius: 3px;
+}
+
+    .timing_div{
+        display: flex;
+        /* border: black 1px solid; */
+        height: 25px;
+        justify-content: center; margin-top: 20px;
+        /* margin-bottom: -10px; */
+        align-items:center; gap: 10px; font-size: 15px;
+    }
+
+    .vishwa_mrp_div{
+        display: flex;
+        /* border: blue 1px solid; */
+        justify-content: space-between; margin-top: 0px;
+        align-items: center;
+       color: #D11243;        font-family: 'Lato', sans-serif;
+       width: 90%; margin: auto;
+       font-size:15px; font-weight: bolder;
+    }
+    .vishwa_quantity{
+        display: flex; width: 90%; margin: auto; margin-bottom:10px ;
+        /* border: red 1px solid; */
+        justify-content: flex-start; gap: 30px;
+        font-family: 'Source Sans Pro';
+    font-size: 14px;
+    font-weight: 600;     color: #4a4a4a;
+        
+    }
+    .vishwa_name{
+        font-size: 15px; margin-left: 5%; margin-top: 25px;
+        margin-bottom: 25px;
+        font-weight: 600;  color: #4a4a4a; 
+       white-space: normal;
+
+      font-family: Lato!important;
+
+      
+
+    }
+    .details{
+        margin-left: 5%;
+        font-family: 'Source Sans Pro';
+    font-size: 14px;
+    color: #727272;
+    line-height: 1.2;
+    white-space: nowrap;
+    margin-bottom: 10px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    }
+    
+    #vishwa_body_products_page{ background-color: #F7F6F6;}
+    #vishwa_products_grid{
+       
+        display: grid; gap: 25px 15px ; width: 75%; 
+        grid-template-columns: repeat(3,1fr);
+        /* grid-template-rows: repeat(10, 600px); */
+
+        /* border: red 1px solid; */
+        margin: auto; margin-top: 100px;
+       
+    }
+    
+    .vishwa_cart{
+        height: 100%; width: 100%;
+       
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;    
+        border-radius: 10px;
+        height: 450px; margin-bottom: 20px;
+        display: block;
+
+
+    }
+    
+        .vishwa_img{
+        height: 50%; width: 100%;  border-radius: 10px;
+    }
+
+        *{
+    Padding: 0px;
+    Margin: 0px ;
+    }
+</style>
