@@ -1,0 +1,388 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+       #main{
+           height:1220px;
+           width:100%;
+           background-color: WhiteSmoke;
+
+           padding:50px;
+
+       }
+       #container{
+           height:1200px;
+           width:98%;
+           background-color: white;
+           margin:auto;
+           
+ 
+          
+
+       }
+       #logos{
+           display:flex;
+           height:4%;
+           width:40%;
+            
+           margin-left: 740px;
+           justify-content:space-between;
+           background-color: whitesmoke;
+       }
+      
+       #img1{
+          
+           width:200px;
+           height:50px;
+       }
+       #img2{
+           width:120px;
+           height:48px;
+
+       }
+       #img3{
+           width:110px;
+           height:48px;
+       }
+       #div1{
+  
+           height:auto;
+           width:95%;
+           margin:auto;
+       }
+       #logoimg{
+           height:100px;
+           width:300px;
+       }
+       #billinfo{
+   
+           height: 40%;
+           width:95%;
+           margin:auto;
+       }
+       #paymentinfo{
+            
+           height: 45%;
+           width:84.5%;
+           margin-left: 2.5%;
+            
+       }
+       #bill1{
+           width:70%;
+           height:30px;
+           border: 1px solid pink;
+           font-size: 22px;
+           background-image: linear-gradient(to right, rgb(10, 112, 10) , rgb(166, 247, 122));
+           border-radius: 7px;
+           padding:10px;
+           color:white;
+           font-family: 'Poppins', sans-serif;
+       }
+       #orderdetails{
+           
+           display:flex;
+       }
+       #pymnt1{
+           width:81%;
+           height:30px;
+            
+           font-size: 22px;
+            background-image: linear-gradient(to right, rgb(10, 112, 10) , rgb(166, 247, 122));
+           border-radius: 7px;
+           padding:10px;
+           color:white;
+           font-family: 'Poppins', sans-serif;
+           margin-top: 50px;
+       }
+       #pymntmain{
+           display:flex;
+           margin-top: 15px;
+           width:1000px;
+
+       }
+       #pymntmeths{
+           font-size: 16px;
+           width:30%;
+       
+
+       }
+       #pymntmeths>div{
+           border:1px solid grey;
+           height:7%;
+           font-size: 18px;
+           width:90%; 
+           color: rgb(10, 1, 1);
+           padding-left: 9px;
+           padding-top: 10px; 
+           
+           font-family: 'Poppins', sans-serif;
+       }
+       #pymntmeths>div:hover{
+           background-color: red;
+           cursor: pointer;
+           color: white;
+       }
+       #carddetails{
+           font-family: 'Poppins',sans-serif;
+           margin:0;padding:0;
+           box-sizing:border-box;
+           outline:none;
+           border:none;
+           text-decoration: none;
+           min-height: 680px;
+   
+           display:flex;
+           align-items: center;
+           justify-content: center;
+           flex-flow:column;
+           padding-bottom: 30px;
+           width:70%;
+
+       }
+       #carddetails form{
+           background: #fff;
+           border-radius: 5px;
+           box-shadow: 0px 10px 15px rgba(0,0,0,.1);
+           padding: 10px;
+           width:500px;
+           margin-top: -200px;
+
+       }
+       #carddetails form #inputbox{
+           margin-top: 10px;
+       }
+       #carddetails form #inputbox span{
+           display:block;
+           color:rgb(26, 3, 3);
+           padding-bottom: 5px;
+           font-size: 19px;
+       }
+
+       #carddetails form #inputbox input,
+       #carddetails form #inputbox select{
+           
+           width:90%;
+           padding:10px;
+           border:1px solid rgba(0,0,0,.3);
+           color:#444;
+       }
+       #carddetails form #flexbox{
+           display:flex;
+           gap:25px;
+           width:93%;
+
+       }
+       #carddetails form #flexbox #inputbox{
+           flex:1 1 150px;
+       }
+
+       #submitbtn1{
+           width:25%;
+           background-image: linear-gradient(to right, rgb(10, 112, 10) , rgb(166, 247, 122));
+       
+           font-size:14px;
+           color:#fff;
+           cursor:pointer;
+            height:35px;
+       }
+       #submitbtn2{
+           width:25%;
+           background-image: linear-gradient(to right, rgb(10, 112, 10) , rgb(166, 247, 122));
+       
+           font-size:14px;
+           color:#fff;
+           cursor:pointer;
+            height:35px;
+            margin-left: 30px;
+       }
+       #submit-btn1:hover{
+           letter-spacing: 2px;
+           opacity: .8;
+       }
+
+        
+     
+      
+        #carddetails #cardcontainer #front #cardnumberbox{
+            padding:30px 0;
+            font-size: 22px;
+            color:#fff;
+
+        }
+        #billnm{
+            width:65%;
+            height:30px;
+            font-size: 20px;
+            margin-top:-70px;
+            margin-left:10px;
+        }
+        #addnm{
+            width:65%;
+            height:30px;
+            font-size: 20px;
+            margin-top:30px;
+            margin-left:10px;
+        }
+        #billflex1{
+            width:66%;
+            height:auto;
+            font-size: 20px;
+            margin-top:30px;
+            margin-left:10px;
+            
+        }
+        #bill3{
+           height:30px;
+           font-size: 20px;
+           width:45%;
+        }
+        #bill4{
+            height:30px;
+            font-size: 20px;
+            width:45%;
+            margin-left:58px; 
+        }
+        #billflex2{
+            width:66%;
+            height:auto;
+            font-size: 20px;
+            margin-top:30px;
+            margin-left:10px;
+            
+        }
+        #bill5{
+           height:30px;
+           font-size: 20px;
+           width:45%;
+        }
+        #bill6{
+            height:30px;
+            font-size: 20px;
+            width:45%;
+            margin-left:58px; 
+        }
+        #billflex3{
+            width:66%;
+            height:auto;
+            font-size: 20px;
+            margin-top:30px;
+            margin-left:10px;
+            
+        }
+        #bill7{
+           height:30px;
+           font-size: 20px;
+           width:45%;
+        }
+        #bill8{
+            height:30px;
+            font-size: 20px;
+            width:45%;
+            margin-left:58px; 
+        }
+        #notes{
+           width:65%;
+            height:30px;
+            font-size: 20px;
+            margin-top:30px;
+            margin-left:10px;
+        }
+         #cardsimg{
+             width:250px;
+           
+           
+         }
+         #cardnumberinput{
+             background-image:url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTg-aIbegXTuKD72gcbiDOahjEhV63kZbZLAg&usqp=CAU");
+             background-position:right;
+             background-size: 250px;
+             background-repeat: no-repeat;
+
+         }
+          
+       marquee{
+           width: 26%;
+       }
+       #ordervalues{
+           margin-left:-360px;
+            
+           height:200px;
+            width:500px;
+            justify-content: space-between;
+            line-height: 10px;
+       }
+       hr{
+           border:1px solid grey;
+       }
+       #formid{
+           width:1300px;
+           margin-top: 45px;
+       }
+       #defaultaddress{
+           margin-top:20px;
+       }
+       @media only screen and (min-width: 400px) and (max-width: 750px) {
+              
+       #main{
+           height:1220px;
+           width:auto;
+           background-color: WhiteSmoke;
+
+           padding:50px;
+
+       }
+       #container{
+           height:1200px;
+           width:auto;
+           background-color: white;
+           margin:auto;
+       }
+       #billinfo{
+   
+           height: 40%;
+           width:350px;
+           margin:auto;
+       }
+       #paymentinfo{
+           
+           height: 0;
+       
+                      
+       }
+       #pymntmain{
+       width:350px;
+
+       }
+           }
+       @media only screen and (min-width: 0px) and (max-width: 400px) {
+           
+       #main{
+           height:1220px;
+           width:auto;
+           background-color: WhiteSmoke;
+
+           padding:50px;
+
+       }
+       #container{
+           height:1200px;
+           width:auto;
+           background-color: white;
+           margin:auto;
+
+       }
+       #billinfo{
+   
+           height: 40%;
+           width:auto;
+           margin:auto;
+       }
+       #paymentinfo{
+           
+           height: 45%;
+           width:auto;
+           margin-left: 2.5%;
+           
+       }
+       #orderdetails{
+           width:300px;
+       }
+       }
