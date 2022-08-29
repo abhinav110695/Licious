@@ -1,4 +1,4 @@
 import footerTal from "../component/footer.js";
 
-document.getElementById("divon").innerHTML = footerTal();
+document.getElementById("footer").innerHTML = footerTal();
 console.log(footerTal())

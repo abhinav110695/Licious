@@ -5,11 +5,11 @@ var cartamount = JSON.parse(localStorage.getItem("sachindata"));
     
    function myFunction(){
        event.preventDefault();
-       window.location.href="paymentsuccess.html";
+       window.location.href="./otp.html";
    };
    function myFunction2(){
        event.preventDefault();
-       window.location.href="paymentfailed.html";
+       window.location.href="./paymentfailed.html";
    };
 
   
